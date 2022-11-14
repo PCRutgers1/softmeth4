@@ -8,9 +8,9 @@ public abstract class Pizza implements Customizable {
     private Size size;
     public abstract double price();
 
-    public Pizza( Crust crust,Size size){
-        this.crust=crust;
-        this.size=size;
-        toppings = new ArrayList<Topping>();
+    public Pizza(String [] toppings, Crust crust,Size size, double price) {
+        this.crust = crust;
+        this.size = size;
+        this.toppings = new ArrayList<Topping>();
     }
 }
