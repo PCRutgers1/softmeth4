@@ -12,9 +12,10 @@ public class PizzaStoreMain extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PizzaStoreMain.class.getResource("MainView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setTitle("RU Pizza");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();   
     }
     public static void main(String[] args){
