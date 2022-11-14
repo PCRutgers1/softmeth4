@@ -31,7 +31,7 @@
                         <Image url="@allorder.png" />
                      </image>
                   </ImageView>
-                  <Button id="ViewStoreOrders" mnemonicParsing="false" prefHeight="25.0" prefWidth="288.0" text="Store Orders" />
+                  <Button id="ViewStoreOrders" mnemonicParsing="false" onAction="#viewStoreOrders" prefHeight="25.0" prefWidth="288.0" text="Store Orders" />
                </children>
                <padding>
                   <Insets top="25.0" />
@@ -47,7 +47,7 @@
                         <Insets left="50.0" top="-50.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button id="viewCurrentOrders" mnemonicParsing="false" prefHeight="25.0" prefWidth="291.0" text="Current Order" />
+                  <Button id="viewCurrentOrders" mnemonicParsing="false" onAction="#viewCurrentOrder" prefHeight="25.0" prefWidth="291.0" text="Current Order" />
                </children>
                <padding>
                   <Insets top="50.0" />
@@ -74,7 +74,7 @@
                         <Image url="@newyorkpizza.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="orderNYPizza" mnemonicParsing="false" prefHeight="25.0" prefWidth="293.0" text="New York Style Pizza" />
+                  <Button id="orderNYPizza" mnemonicParsing="false" onAction="#orderNYPizza" prefHeight="25.0" prefWidth="293.0" text="New York Style Pizza" />
                </children>
             </VBox>
          </children>

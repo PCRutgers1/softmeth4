@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="">
+    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="11/14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaStoreMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaStoreMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/MainView.fxml" afterDir="false" />
     </list>
-    <list id="90164af0-7cd3-4633-bf9a-e4ff94efc38c" name="Changes by lopez" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
-    </list>
+    <list id="90164af0-7cd3-4633-bf9a-e4ff94efc38c" name="Changes by lopez" comment="Changes by lopez" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +79,21 @@
       <option name="presentableId" value="Default" />
       <updated>1668141614735</updated>
     </task>
+    <task id="LOCAL-00001" summary="11/14">
+      <created>1668466033819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668466033819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changes by lopez">
+      <created>1668466050822</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668466050822</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +106,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="11/14" />
+    <MESSAGE value="Changes by lopez" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by lopez" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
