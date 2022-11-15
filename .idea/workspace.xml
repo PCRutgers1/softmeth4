@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="11/14">
+    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="finished UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" afterDir="false" />
     </list>
     <list id="90164af0-7cd3-4633-bf9a-e4ff94efc38c" name="Changes by lopez" comment="Changes by lopez" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668466050822</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chicago UI">
+      <created>1668469053348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668469053348</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,7 +117,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="11/14" />
     <MESSAGE value="Changes by lopez" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by lopez" />
+    <MESSAGE value="chicago UI" />
+    <MESSAGE value="finished UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
