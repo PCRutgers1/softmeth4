@@ -8,9 +8,9 @@ public enum Crust {
         this.crust = crust;
     }
     public static Crust findCrust(String crust) {
-        Crust[] allTime = Crust.values();
+        Crust[] allCrust = Crust.values();
 
-        for (Crust c : allTime) {
+        for (Crust c : allCrust) {
             if (c.name().equalsIgnoreCase(crust)) return c;
         }
         return INVALID;
