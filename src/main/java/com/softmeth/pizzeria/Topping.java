@@ -26,7 +26,7 @@ public enum Topping {
         this.topping=topping;
     }
 
-    public static Topping findCrust(String topping) {
+    public static Topping findTopping(String topping) {
         Topping[] allToppings = Topping.values();
 
         for (Topping t : allToppings) {
