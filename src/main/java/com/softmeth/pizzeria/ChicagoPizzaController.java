@@ -27,7 +27,7 @@ public class ChicagoPizzaController {
 
     @FXML
     private void AddToppingToPizza(ActionEvent e){
-//        System.out.println(ToppingsListChicago.getSelectionModel().getSelectedItem());
+
         String topping =ToppingsListChicago.getSelectionModel().getSelectedItem();
         if(!toppings.contains(topping)){
             MyToppingsListChicago.getItems().add(topping);
