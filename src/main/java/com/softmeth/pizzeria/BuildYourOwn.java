@@ -1,6 +1,10 @@
 package com.softmeth.pizzeria;
 
 public class BuildYourOwn extends Pizza{
+    public BuildYourOwn(String[] toppings, Crust crust, Size size) {
+        super(toppings, crust, size);
+    }
+
     @Override
     public boolean add(Object obj) {
         return false;
