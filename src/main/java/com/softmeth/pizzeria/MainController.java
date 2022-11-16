@@ -1,16 +1,10 @@
 package com.softmeth.pizzeria;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 public class MainController {
     String[] orderOptions = {"Build Your Own Pizza", "Deluxe", "BBQ Chicken", "Meatzza"};
@@ -18,9 +12,6 @@ public class MainController {
     @FXML
     void orderChicagoPizza(ActionEvent e){
         try {
-            ComboBox combo_box =
-                    new ComboBox(FXCollections
-                            .observableArrayList(orderOptions));
             FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("ChicagoView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
@@ -45,12 +36,27 @@ public class MainController {
     }
     @FXML
     void viewCurrentOrder(ActionEvent e){
-        FXMLLoader fxmlLoader = new FXMLLoader(PizzaStoreMain.class.getResource("MainView.fxml"));
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("CurrentOrderView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("View Current Order");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception ignored){
+        }
 
     }
     @FXML
     void viewStoreOrders(ActionEvent e){
-        FXMLLoader fxmlLoader = new FXMLLoader(PizzaStoreMain.class.getResource("MainView.fxml"));
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("StoreOrderView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("View ALl Store Orders");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception ignored){
+        }
     }
 }

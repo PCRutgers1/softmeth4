@@ -99,7 +99,7 @@
          <children>
             <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price" />
             <Text id="PriceOfPizzaChicago" layoutX="81.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <Button id="AddPizzaToOrderChicago" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Add To Order" />
+            <Button id="AddPizzaToOrderChicago" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddPizzaToOrder" prefHeight="25.0" prefWidth="120.0" text="Add To Order" />
          </children>
       </Pane>
     </children>
