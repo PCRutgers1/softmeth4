@@ -30,7 +30,7 @@
             <children>
                 <Pane prefHeight="132.0" prefWidth="326.0">
                     <children>
-                        <ComboBox id="ChoosePizzaChicago" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="192.0" promptText="Choose your pizza">
+                        <ComboBox fx:id="ChoosePizzaChicago" layoutX="14.0" layoutY="14.0" onAction="#ChangePizzaSelection" prefHeight="25.0" prefWidth="192.0" promptText="Choose your pizza">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
                                     <String fx:value="Build your own pizza" />
@@ -63,7 +63,7 @@
                 </Pane>
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <ListView layoutX="6.0" prefHeight="200.0" prefWidth="200.0">
+                        <ListView fx:id="ToppingsListChicago" layoutX="6.0" prefHeight="200.0" prefWidth="200.0">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
                                     <Text fx:id="pineapple" text="Pineapple" />
@@ -87,10 +87,10 @@
                 </Pane>
                 <Pane prefHeight="200.0" prefWidth="316.0">
                     <children>
-                        <ListView layoutX="102.0" layoutY="38.0" prefHeight="162.0" prefWidth="200.0" />
+                        <ListView fx:id="MyToppingsListChicago" layoutX="102.0" layoutY="38.0" prefHeight="162.0" prefWidth="200.0" />
                         <Text layoutX="120.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added Toppings" textAlignment="CENTER" wrappingWidth="146.18511962890625" />
-                        <Button layoutX="14.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Add" />
-                        <Button layoutX="14.0" layoutY="119.0" mnemonicParsing="false" text="Remove" />
+                        <Button fx:id="ChicagoAddButton" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" onAction="#AddToppingToPizza" prefHeight="25.0" prefWidth="59.0" text="Add" />
+                        <Button fx:id="ChicagoRemoveButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#RemoveToppingFromPizza" text="Remove" />
                     </children>
                 </Pane>
             </children>
