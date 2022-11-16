@@ -29,12 +29,18 @@ public class ChicagoPizzaController {
     private void AddToppingToPizza(ActionEvent e){
 //        System.out.println(ToppingsListChicago.getSelectionModel().getSelectedItem());
         String topping =ToppingsListChicago.getSelectionModel().getSelectedItem();
+        if(!toppings.contains(topping)){
+            MyToppingsListChicago.getItems().add(topping);
+        }
         toppings.add(topping);
-        MyToppingsListChicago.getItems().add(topping);
     }
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e){
-        toppings.remove(MyToppingsListChicago.getSelectionModel().getSelectedItem());
+        String topping =MyToppingsListChicago.getSelectionModel().getSelectedItem();
+        if(toppings.contains(topping)){
+            MyToppingsListChicago.getItems().remove(topping);
+        }
+        toppings.remove(topping);
     }
     @FXML
     /**

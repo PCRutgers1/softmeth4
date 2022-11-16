@@ -66,20 +66,20 @@
                         <ListView fx:id="ToppingsListChicago" layoutX="6.0" prefHeight="200.0" prefWidth="200.0">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
-                                    <Text fx:id="pineapple" text="Pineapple" />
-                                    <Text fx:id="Chicken" text="Chicken" />
-                                    <Text fx:id="Sausage" text="Sausage" />
-                                    <Text fx:id="Pepperoni" text="Pepperoni" />
-                                    <Text fx:id="Beef" text="Beef" />
-                                    <Text fx:id="Ham" text="Ham" />
-                                    <Text fx:id="Peppers" text="Peppers" />
-                                    <Text fx:id="Mushroom" text="Mushroom" />
-                                    <Text fx:id="Onion" text="Onion" />
-                                    <Text fx:id="bbq" text="BBQ Chicken" />
-                                    <Text fx:id="spinach" text="Spinach" />
-                                    <Text fx:id="provolone" text="Provolone" />
-                                    <Text fx:id="olives" text="Olives" />
-                                    <Text fx:id="bacon" text="Bacon" />
+                                    <String fx:id="pineapple" fx:value="Pineapple" />
+                                    <String fx:id="Chicken" fx:value="Chicken" />
+                                    <String fx:id="Sausage" fx:value="Sausage" />
+                                    <String fx:id="Pepperoni" fx:value="Pepperoni" />
+                                    <String fx:id="Beef" fx:value="Beef" />
+                                    <String fx:id="Ham" fx:value="Ham" />
+                                    <String fx:id="Peppers" fx:value="Peppers" />
+                                    <String fx:id="Mushroom" fx:value="Mushroom" />
+                                    <String fx:id="Onion" fx:value="Onion" />
+                                    <String fx:id="bbq" fx:value="BBQ Chicken" />
+                                    <String fx:id="spinach" fx:value="Spinach" />
+                                    <String fx:id="provolone" fx:value="Provolone" />
+                                    <String fx:id="olives" fx:value="Olives" />
+                                    <String fx:id="bacon" fx:value="Bacon" />
                                 </FXCollections>
                             </items>
                         </ListView>
