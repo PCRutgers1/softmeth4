@@ -27,7 +27,11 @@ public class ChicagoPizzaController {
 
     @FXML
     private void AddToppingToPizza(ActionEvent e){
-
+        if(MyToppingsListChicago.getItems().size() == 6){
+            ChicagoAddButton.setDisable(true);
+        }else{
+            ChicagoAddButton.setDisable(false);
+        }
         String topping =ToppingsListChicago.getSelectionModel().getSelectedItem();
         if(!toppings.contains(topping)){
             MyToppingsListChicago.getItems().add(topping);
@@ -36,6 +40,7 @@ public class ChicagoPizzaController {
     }
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e){
+        ChicagoAddButton.setDisable(false);
         String topping =MyToppingsListChicago.getSelectionModel().getSelectedItem();
         if(toppings.contains(topping)){
             MyToppingsListChicago.getItems().remove(topping);
