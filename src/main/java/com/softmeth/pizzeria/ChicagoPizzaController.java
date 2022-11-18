@@ -1,11 +1,14 @@
 package com.softmeth.pizzeria;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,11 +25,12 @@ public class ChicagoPizzaController {
     private Button ChicagoAddButton, ChicagoRemoveButton;
 
     @FXML
-    private Text TypeOfCrustChicago;
+    private Text TypeOfCrustChicago, PriceOfPizzaChicago;
 
     RadioButton pizzaSize;
 
-    Set<String> toppings = new HashSet<String>();
+    private double price;
+    Set<Topping> toppings = new HashSet<Topping>();
 
 
     @FXML
@@ -38,10 +42,13 @@ public class ChicagoPizzaController {
         }
         String topping =
                 ToppingsListChicago.getSelectionModel().getSelectedItem();
-        if (!toppings.contains(topping)) {
+        if (!toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListChicago.getItems().add(topping);
         }
-        toppings.add(topping);
+
+
+        toppings.add(Topping.findTopping(topping));
+
     }
 
     @FXML
@@ -49,10 +56,10 @@ public class ChicagoPizzaController {
         ChicagoAddButton.setDisable(false);
         String topping =
                 MyToppingsListChicago.getSelectionModel().getSelectedItem();
-        if (toppings.contains(topping)) {
+        if (toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListChicago.getItems().remove(topping);
         }
-        toppings.remove(topping);
+        toppings.remove(Topping.findTopping(topping));
     }
 
     @FXML
@@ -65,9 +72,10 @@ public class ChicagoPizzaController {
         PizzaFactory myPizza = new ChicagoPizza();
         Pizza newPizza;
         if (selectedPizzaType == null || selectedPizzaType.equals(
-                "Build Your Own Pizza"))
+                "Build Your Own Pizza")) {
             newPizza = myPizza.createBuildYourOwn();
-        else if (selectedPizzaType.equals("Deluxe"))
+            newPizza.setToppings(toppings);
+        } else if (selectedPizzaType.equals("Deluxe"))
             newPizza = myPizza.createDeluxe();
         else if (selectedPizzaType.equals("BBQ Chicken"))
             newPizza = myPizza.createBBQChicken();
@@ -75,7 +83,8 @@ public class ChicagoPizzaController {
 
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
-
+        newPizza.setPrice(price);
+        Order.currentOrder.add(newPizza);
     }
 
     private void setButtons(Boolean state) {
@@ -83,21 +92,77 @@ public class ChicagoPizzaController {
         ChicagoRemoveButton.setDisable(state);
     }
 
+    private void setPizzaPrice(String pizzaType, String size) {
+        if (pizzaType.equals("Build your own pizza")) {
+            if (size.equals("Large")) price = 12.99;
+            else if (size.equals("Medium")) price = 10.99;
+            else price = 8.99;
+        } else if (pizzaType.equals("Deluxe")) {
+            if (size.equals("Large")) price = 18.99;
+            else if (size.equals("Medium")) price = 16.99;
+            else price = 14.99;
+        } else if (pizzaType.equals("BBQ Chicken")) {
+            if (size.equals("Large")) price = 17.99;
+            else if (size.equals("Medium")) price = 15.99;
+            else price = 13.99;
+        } else if (pizzaType.equals("Meatzza")) {
+            if (size.equals("Large")) price = 19.99;
+            else if (size.equals("Medium")) price = 17.99;
+            else price = 15.99;
+        }
+    }
+
+    private void setToppings(String pizzaType) {
+        toppings = new HashSet<>();
+        ArrayList<String> toppingsAsString = new ArrayList<String>();
+        if (pizzaType.equals("Deluxe")) {
+            for (String t : Topping.deluxeToppings) {
+                toppings.add(Topping.findTopping(t));
+                toppingsAsString.add(t);
+            }
+        } else if (pizzaType.equals("Meatzza")) {
+            for (String t : Topping.meatzzaToppings) {
+                toppings.add(Topping.findTopping(t));
+                toppingsAsString.add(t);
+            }
+        } else if (pizzaType.equals("BBQ Chicken")) {
+            for (String t : Topping.bbqToppings) {
+                toppings.add(Topping.findTopping(t));
+                toppingsAsString.add(t);
+            }
+        }
+        MyToppingsListChicago.setItems(
+                FXCollections.observableList(toppingsAsString));
+    }
+
     @FXML
     void ChangePizzaSelection(ActionEvent e) {
         String pizzaType = ChoosePizzaChicago.getValue();
-        if (pizzaType.equals("Build your own pizza")) {
+        setToppings(pizzaType);
+        if (pizzaType.equals("Build Your Own Pizza")) {
             setButtons(false);
             TypeOfCrustChicago.setText("Pan");
+            setPizzaPrice(pizzaType,
+                    ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("Deluxe")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Deep Dish");
+            setPizzaPrice(pizzaType,
+                    ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("BBQ Chicken")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Pan");
+            setPizzaPrice(pizzaType,
+                    ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("Meatzza")) {
             setButtons(true);
-            TypeOfCrustChicago.setText("Stuffed ");
+            TypeOfCrustChicago.setText("Stuffed");
+            setPizzaPrice(pizzaType,
+                    ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            PriceOfPizzaChicago.setText(Double.toString(price));
         }
     }
 }

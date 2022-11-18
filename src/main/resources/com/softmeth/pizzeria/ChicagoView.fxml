@@ -72,7 +72,7 @@
                                     <String fx:id="Pepperoni" fx:value="Pepperoni" />
                                     <String fx:id="Beef" fx:value="Beef" />
                                     <String fx:id="Ham" fx:value="Ham" />
-                                    <String fx:id="Peppers" fx:value="Peppers" />
+                                    <String fx:id="Peppers" fx:value="Green Peppers" />
                                     <String fx:id="Mushroom" fx:value="Mushroom" />
                                     <String fx:id="Onion" fx:value="Onion" />
                                     <String fx:id="bbq" fx:value="BBQ Chicken" />
@@ -98,7 +98,7 @@
       <Pane layoutX="24.0" layoutY="473.0" prefHeight="46.0" prefWidth="593.0">
          <children>
             <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price" />
-            <Text id="PriceOfPizzaChicago" layoutX="81.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="PriceOfPizzaChicago" layoutX="81.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Button id="AddPizzaToOrderChicago" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddPizzaToOrder" prefHeight="25.0" prefWidth="120.0" text="Add To Order" />
          </children>
       </Pane>

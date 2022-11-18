@@ -1,6 +1,7 @@
 package com.softmeth.pizzeria;
 
 public class Deluxe extends Pizza{
+
     private double price;
 
     /**
@@ -13,6 +14,19 @@ public class Deluxe extends Pizza{
         super(toppings, crust);
     }
 
+    /**
+     * setter method for Price
+     * sets the price of the Deluxe Pizza
+     * @param price the price of the Pizza
+     */
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    /**
+     * This method adds an object to something
+     * @param obj the Object being added
+     */
     @Override
     public boolean add(Object obj) {
         return false;

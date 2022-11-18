@@ -38,6 +38,15 @@ public class BBQChicken extends Pizza{
      */
     @Override
     public double price() {
-        return 0;
+        return this.price;
+    }
+
+    /**
+     * setter method for Price
+     * sets the price of the BBQ Chicken Pizza
+     * @param price the price of the Pizza
+     */
+    public void setPrice(double price){
+        this.price = price;
     }
 }

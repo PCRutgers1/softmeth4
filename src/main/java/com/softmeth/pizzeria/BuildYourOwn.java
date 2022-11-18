@@ -1,10 +1,33 @@
 package com.softmeth.pizzeria;
 
 public class BuildYourOwn extends Pizza{
-    public BuildYourOwn(String[] toppings, Crust crust, Size size) {
-        super(toppings, crust, size);
+
+    /**
+     * Set all the Attributes of a Build Your Own Pizza
+     *
+     * @param crust the Crust of the pizza
+     */
+    public BuildYourOwn(Crust crust) {
+        super(crust);
+    }
+    private double price;
+
+    /**
+     * setter method for Price
+     * sets the price of the Meatzza Pizza
+     * @param price the price of the Pizza
+     */
+    public void setPrice(double price){
+        this.price = price;
+    }
+    public double getPrice(){
+        return  this.price;
     }
 
+    /**
+     * This method adds an object to something
+     * @param obj the Object being added
+     */
     @Override
     public boolean add(Object obj) {
         return false;

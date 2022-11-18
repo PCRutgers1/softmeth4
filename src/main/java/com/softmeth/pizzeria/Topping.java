@@ -25,7 +25,9 @@ public enum Topping {
     BACON("Bacon"),
     INVALID("None");
 
-
+    public static final String[] deluxeToppings = {"Sausage", "Pepperoni", "Green Pepper", "Onion", "Mushroom"};
+    public static final String[] meatzzaToppings = {"Sausage", "Pepperoni", "Beef", "Ham"};
+    public static final String[] bbqToppings = {"BBQ Chicken", "Green Pepper", "Provolone", "Cheddar"};
     private final String topping;
 
     /**

@@ -27,11 +27,8 @@ public class ChicagoPizza implements PizzaFactory{
 
     @Override
     public Pizza createBuildYourOwn() {
-        Pizza buildMyOwn = new BuildYourOwn();
-
-
-        return buildMyOwn;
+        Crust crust = Crust.PAN;
+        Pizza myPizza = new BuildYourOwn(crust);
+        return myPizza;
     }
-
-
 }

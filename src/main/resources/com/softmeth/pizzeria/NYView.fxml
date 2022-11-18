@@ -71,7 +71,7 @@
                                     <Text fx:id="Pepperoni" text="Pepperoni" />
                                     <Text fx:id="Beef" text="Beef" />
                                     <Text fx:id="Ham" text="Ham" />
-                                    <Text fx:id="Peppers" text="Peppers" />
+                                    <Text fx:id="Peppers" text="Green Peppers" />
                                     <Text fx:id="Mushroom" text="Mushroom" />
                                     <Text fx:id="Onion" text="Onion" />
                                     <Text fx:id="bbq" text="BBQ Chicken" />

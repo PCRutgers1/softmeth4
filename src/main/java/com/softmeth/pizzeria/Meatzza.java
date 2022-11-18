@@ -12,7 +12,14 @@ public class Meatzza extends Pizza{
     public Meatzza(String[] toppings, Crust crust) {
         super(toppings, crust);
     }
+    public void setPrice(double price){
+        this.price = price;
+    }
 
+    /**
+     * This method adds an object to something
+     * @param obj the Object being added
+     */
     @Override
     public boolean add(Object obj) {
         return false;
@@ -34,6 +41,6 @@ public class Meatzza extends Pizza{
      */
     @Override
     public double price() {
-        return 0;
+        return this.price;
     }
 }
