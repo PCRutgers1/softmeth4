@@ -16,7 +16,7 @@ public class MainController {
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
             stage.setTitle("Order Chicago Style Pizza");
-
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         }catch(Exception ignored){

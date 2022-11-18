@@ -30,17 +30,17 @@
             <children>
                 <Pane prefHeight="132.0" prefWidth="326.0">
                     <children>
-                        <ComboBox fx:id="ChoosePizzaChicago" layoutX="14.0" layoutY="14.0" onAction="#ChangePizzaSelection" prefHeight="25.0" prefWidth="192.0" promptText="Choose your pizza">
+                        <ComboBox fx:id="ChoosePizzaChicago" layoutX="14.0" layoutY="14.0" onAction="#ChangePizzaSelection" prefHeight="25.0" prefWidth="192.0" promptText="Build Your Own Pizza">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
-                                    <String fx:value="Build your own pizza" />
+                                    <String fx:value="Build Your Own Pizza" />
                                     <String fx:value="Deluxe" />
                                     <String fx:value="BBQ Chicken" />
                                     <String fx:value="Meatzza" />
                                 </FXCollections>
                             </items>
                         </ComboBox>
-                        <RadioButton layoutX="23.0" layoutY="49.0" mnemonicParsing="false" text="Small">
+                        <RadioButton layoutX="23.0" layoutY="49.0" mnemonicParsing="false" selected="true" text="Small">
                             <toggleGroup>
                                 <ToggleGroup fx:id="ChicagoPizzaSize" />
                             </toggleGroup>
@@ -48,7 +48,7 @@
                         <RadioButton layoutX="100.0" layoutY="49.0" mnemonicParsing="false" text="Medium" toggleGroup="$ChicagoPizzaSize" />
                         <RadioButton layoutX="180.0" layoutY="49.0" mnemonicParsing="false" text="Large" toggleGroup="$ChicagoPizzaSize" />
                         <Text layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crust Type:" />
-                        <Text id="TypeOfCrustChicago" layoutX="138.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="30.13671875" />
+                        <Text fx:id="TypeOfCrustChicago" layoutX="138.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="30.13671875" />
                         <Text layoutX="33.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Toppings" textAlignment="CENTER" wrappingWidth="153.15746307373047" />
                     </children>
                 </Pane>

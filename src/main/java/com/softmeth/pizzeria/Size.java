@@ -12,7 +12,7 @@ public enum Size {
     MEATZZA_LARGE("Meatzza Large",18.99),
     SMALL("Small",8.99),
     MEDIUM("Medium",10.99),
-    LARGE("Large",12.99);
+    LARGE("Large",12.99),INVALID("",0);
 
     private final String size;
     private final double price;
@@ -26,5 +26,13 @@ public enum Size {
     }
     public double getPrice() {
         return this.price;
+    }
+    public static Size findSize(String size) {
+        Size[] allSizes = Size.values();
+
+        for (Size c : allSizes) {
+            if (c.size.equalsIgnoreCase(size)) return c;
+        }
+        return INVALID;
     }
 }

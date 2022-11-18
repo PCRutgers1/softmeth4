@@ -1,8 +1,9 @@
 package com.softmeth.pizzeria;
 
 public class Deluxe extends Pizza{
-    public Deluxe(String[] toppings, Crust crust, Size size) {
-        super(toppings, crust, size);
+    private double price;
+    public Deluxe(String[] toppings, Crust crust) {
+        super(toppings, crust);
     }
 
     @Override
@@ -17,6 +18,6 @@ public class Deluxe extends Pizza{
 
     @Override
     public double price() {
-        return 0;
+        return this.price;
     }
 }

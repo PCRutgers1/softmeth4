@@ -1,23 +1,38 @@
 package com.softmeth.pizzeria;
 
 public class ChicagoPizza implements PizzaFactory{
+
     @Override
     public Pizza createDeluxe() {
-        return null;
+        String [] toppings = {"Sausage", "pepperoni", "green pepper", "onion", "mushroom"};
+        Crust crust = Crust.DEEP_DISH;
+        return new Deluxe(toppings,crust);
     }
 
     @Override
     public Pizza createMeatzza() {
-        return null;
+
+        Pizza meatzza = new Meatzza();
+
+
+        return meatzza;
     }
 
     @Override
     public Pizza createBBQChicken() {
-        return null;
+        Pizza bbq = new BBQChicken();
+
+
+        return bbq;
     }
 
     @Override
     public Pizza createBuildYourOwn() {
-        return null;
+        Pizza buildMyOwn = new BuildYourOwn();
+
+
+        return buildMyOwn;
     }
+
+
 }
