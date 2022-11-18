@@ -1,5 +1,11 @@
 package com.softmeth.pizzeria;
 
+/**
+ * This is the Size enum class which contains all of the different Toppings
+ * that are being offered for a pizza with each of them stored as values
+ *
+ * @author Peter Chen,Jonathan Lopez
+ */
 public enum Topping {
     PINEAPPLE("Pineapple"),
     CHICKEN("Chicken"),
@@ -7,9 +13,9 @@ public enum Topping {
     PEPPERONI("Pepperoni"),
     BEEF("Beef"),
     HAM("Ham"),
-    GREEN_PEPPERS("Green Peppers"),
+    GREEN_PEPPER("Green Pepper"),
     PEPPERS("Peppers"),
-    MUSHROOMS("Mushrooms"),
+    MUSHROOM("Mushroom"),
     ONIONS("Onions"),
     BBQ_CHICKEN("BBQ Chicken"),
     SPINACH("Spinach"),
@@ -22,10 +28,21 @@ public enum Topping {
 
     private final String topping;
 
+    /**
+     * Simple constructor for each of our enum values that records the topping
+     * being placed on a pizza and sets the topping
+     * @param topping is the topping to set the current topping object equal to
+     */
     Topping(String topping) {
         this.topping=topping;
     }
 
+    /**
+     * Take in a string topping like Pepperoni and change it to a numeric Topping
+     *
+     * @param topping The String that is being changed to numeric
+     * @return The numeric Topping
+     */
     public static Topping findTopping(String topping) {
         Topping[] allToppings = Topping.values();
 
@@ -33,5 +50,14 @@ public enum Topping {
             if (t.name().equalsIgnoreCase(topping)) return t;
         }
         return INVALID;
+    }
+
+    /**
+     * Capitalize the first letter of a word and make the rest lower case
+     * @param word, the word that needs to be capitalized
+     */
+    private String capitalize(String word) {
+        return word.substring(0, 1).toUpperCase()
+                + word.substring(1).toLowerCase();
     }
 }

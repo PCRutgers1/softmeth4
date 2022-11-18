@@ -3,21 +3,31 @@ package com.softmeth.pizzeria;
 public class NYPizza implements PizzaFactory{
     @Override
     public Pizza createDeluxe() {
-        return null;
+        String [] toppings = {"Sausage", "Pepperoni", "Green Pepper", "Onion", "Mushroom"};
+        Crust crust = Crust.BROOKLYN;
+        return new Deluxe(toppings,crust);
     }
 
     @Override
     public Pizza createMeatzza() {
-        return null;
+        String [] toppings = {"Sausage", "Pepperoni", "Beef", "Ham"};
+        Crust crust = Crust.HAND_TOSSED;
+        Pizza meatzza = new Meatzza(toppings,crust);
+        return meatzza;
     }
 
     @Override
     public Pizza createBBQChicken() {
-        return null;
+        String [] toppings = {"BBQ Chicken", "Green Pepper", "Provolone", "Cheddar"};
+        Crust crust = Crust.THIN;
+        Pizza bbq = new BBQChicken(toppings,crust);
+        return bbq;
     }
 
     @Override
     public Pizza createBuildYourOwn() {
-        return null;
+        Crust crust = Crust.HAND_TOSSED;
+        Pizza myPizza = new BuildYourOwn(crust);
+        return myPizza;
     }
 }

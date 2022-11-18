@@ -4,25 +4,24 @@ public class ChicagoPizza implements PizzaFactory{
 
     @Override
     public Pizza createDeluxe() {
-        String [] toppings = {"Sausage", "pepperoni", "green pepper", "onion", "mushroom"};
+        String [] toppings = {"Sausage", "Pepperoni", "Green Pepper", "Onion", "Mushroom"};
         Crust crust = Crust.DEEP_DISH;
         return new Deluxe(toppings,crust);
     }
 
     @Override
     public Pizza createMeatzza() {
-
-        Pizza meatzza = new Meatzza();
-
-
+        String [] toppings = {"Sausage", "Pepperoni", "Beef", "Ham"};
+        Crust crust = Crust.STUFFED;
+        Pizza meatzza = new Meatzza(toppings,crust);
         return meatzza;
     }
 
     @Override
     public Pizza createBBQChicken() {
-        Pizza bbq = new BBQChicken();
-
-
+        String [] toppings = {"BBQ Chicken", "Green Pepper", "Provolone", "Cheddar"};
+        Crust crust = Crust.PAN;
+        Pizza bbq = new BBQChicken(toppings,crust);
         return bbq;
     }
 
