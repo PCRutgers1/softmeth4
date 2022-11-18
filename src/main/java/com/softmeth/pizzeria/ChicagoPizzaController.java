@@ -32,6 +32,14 @@ public class ChicagoPizzaController {
     private double price;
     Set<Topping> toppings = new HashSet<Topping>();
 
+    @FXML
+    private void updatePricing(ActionEvent e){
+        String pizzaType = ChoosePizzaChicago.getValue();
+        if(pizzaType == null)
+            pizzaType = "Build Your Own Pizza";
+        setPizzaPrice(pizzaType,((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+    }
+
 
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
@@ -48,7 +56,7 @@ public class ChicagoPizzaController {
 
 
         toppings.add(Topping.findTopping(topping));
-
+        setPizzaPrice("Build Your Own Pizza", ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
 
     @FXML
@@ -61,6 +69,8 @@ public class ChicagoPizzaController {
         }
         toppings.remove(Topping.findTopping(topping));
     }
+
+
 
     @FXML
     /**
@@ -93,10 +103,13 @@ public class ChicagoPizzaController {
     }
 
     private void setPizzaPrice(String pizzaType, String size) {
-        if (pizzaType.equals("Build your own pizza")) {
+        if (pizzaType.equals("Build Your Own Pizza")) {
             if (size.equals("Large")) price = 12.99;
             else if (size.equals("Medium")) price = 10.99;
             else price = 8.99;
+            if(toppings != null && toppings.size()>0){
+                price = price + toppings.size() * 1.59;
+            }
         } else if (pizzaType.equals("Deluxe")) {
             if (size.equals("Large")) price = 18.99;
             else if (size.equals("Medium")) price = 16.99;
@@ -110,6 +123,8 @@ public class ChicagoPizzaController {
             else if (size.equals("Medium")) price = 17.99;
             else price = 15.99;
         }
+        PriceOfPizzaChicago.setText(Double.toString(price));
+
     }
 
     private void setToppings(String pizzaType) {
@@ -144,25 +159,21 @@ public class ChicagoPizzaController {
             TypeOfCrustChicago.setText("Pan");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
-            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("Deluxe")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Deep Dish");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
-            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("BBQ Chicken")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Pan");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
-            PriceOfPizzaChicago.setText(Double.toString(price));
         } else if (pizzaType.equals("Meatzza")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Stuffed");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
-            PriceOfPizzaChicago.setText(Double.toString(price));
         }
     }
 }

@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="can select toppings and shit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" afterDir="false" />
     </list>
     <list id="90164af0-7cd3-4633-bf9a-e4ff94efc38c" name="Changes by lopez" comment="added comments" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668736147990</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="can select toppings and shit">
+      <created>1668736251080</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668736251080</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
