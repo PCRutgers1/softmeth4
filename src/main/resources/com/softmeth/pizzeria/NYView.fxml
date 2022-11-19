@@ -16,47 +16,57 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softmeth.pizzeria.NYPizzaController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.softmeth.pizzeria.NYPizzaController">
     <children>
         <Pane layoutX="5.0" layoutY="1.0" prefHeight="65.0" prefWidth="600.0">
             <children>
-                <Text fill="#ec1111" layoutX="165.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order New York Style Pizza">
+                <Text fill="#ec1111" layoutX="165.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Order New York Style Pizza">
                     <font>
-                        <Font size="24.0" />
-                    </font></Text>
+                        <Font size="24.0"/>
+                    </font>
+                </Text>
             </children>
         </Pane>
         <FlowPane layoutY="67.0" prefHeight="402.0" prefWidth="606.0">
             <children>
                 <Pane prefHeight="132.0" prefWidth="326.0">
                     <children>
-                        <ComboBox fx:id="ChoosePizzaNY" layoutX="14.0" layoutY="14.0" onAction="#ChangePizzaSelection" prefHeight="25.0" prefWidth="192.0" promptText="Choose your pizza">
+                        <ComboBox fx:id="ChoosePizzaNY" layoutX="14.0" layoutY="14.0" onAction="#ChangePizzaSelection"
+                                  prefHeight="25.0" prefWidth="192.0" promptText="Choose your pizza">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
-                                    <String fx:value="Build your own pizza" />
-                                    <String fx:value="Deluxe" />
-                                    <String fx:value="BBQ Chicken" />
-                                    <String fx:value="Meatzza" />
+                                    <String fx:value="Build your own pizza"/>
+                                    <String fx:value="Deluxe"/>
+                                    <String fx:value="BBQ Chicken"/>
+                                    <String fx:value="Meatzza"/>
                                 </FXCollections>
                             </items>
                         </ComboBox>
-                        <RadioButton layoutX="23.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing" selected="true" text="Small">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="NYPizzaSize" />
-                     </toggleGroup>
+                        <RadioButton layoutX="23.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing"
+                                     selected="true" text="Small">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="NYPizzaSize"/>
+                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="100.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing" text="Medium" toggleGroup="$NYPizzaSize" />
-                        <RadioButton layoutX="180.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing" text="Large" toggleGroup="$NYPizzaSize" />
-                        <Text layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crust Type:" />
-                        <Text id="TypeOfCrustNY" fx:id="TypeOfCrustNY" layoutX="138.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="30.13671875" />
-                        <Text layoutX="33.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Toppings" textAlignment="CENTER" wrappingWidth="153.15746307373047" />
+                        <RadioButton layoutX="100.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing"
+                                     text="Medium" toggleGroup="$NYPizzaSize"/>
+                        <RadioButton layoutX="180.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing"
+                                     text="Large" toggleGroup="$NYPizzaSize"/>
+                        <Text layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crust Type:"/>
+                        <Text id="TypeOfCrustNY" fx:id="TypeOfCrustNY" layoutX="138.0" layoutY="126.0"
+                              strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="30.13671875"/>
+                        <Text layoutX="33.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="List of Toppings" textAlignment="CENTER" wrappingWidth="153.15746307373047"/>
                     </children>
                 </Pane>
                 <Pane prefHeight="182.0" prefWidth="267.0">
                     <children>
-                        <ImageView fitHeight="162.0" fitWidth="251.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="162.0" fitWidth="251.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true"
+                                   preserveRatio="true">
                             <image>
-                                <Image url="@newyork.jpg" />
+                                <Image url="@newyork.jpg"/>
                             </image>
                         </ImageView>
                     </children>
@@ -66,20 +76,20 @@
                         <ListView fx:id="ToppingsListNY" layoutX="6.0" prefHeight="200.0" prefWidth="200.0">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
-                                    <Text fx:id="pineapple" text="Pineapple" />
-                                    <Text fx:id="Chicken" text="Chicken" />
-                                    <Text fx:id="Sausage" text="Sausage" />
-                                    <Text fx:id="Pepperoni" text="Pepperoni" />
-                                    <Text fx:id="Beef" text="Beef" />
-                                    <Text fx:id="Ham" text="Ham" />
-                                    <Text fx:id="Peppers" text="Green Peppers" />
-                                    <Text fx:id="Mushroom" text="Mushroom" />
-                                    <Text fx:id="Onion" text="Onion" />
-                                    <Text fx:id="bbq" text="BBQ Chicken" />
-                                    <Text fx:id="spinach" text="Spinach" />
-                                    <Text fx:id="provolone" text="Provolone" />
-                                    <Text fx:id="olives" text="Olives" />
-                                    <Text fx:id="bacon" text="Bacon" />
+                                    <String fx:value="Pineapple"/>
+                                    <String fx:value="Chicken"/>
+                                    <String fx:value="Sausage"/>
+                                    <String fx:value="Pepperoni"/>
+                                    <String fx:value="Beef"/>
+                                    <String fx:value="Ham"/>
+                                    <String fx:value="Green Peppers"/>
+                                    <String fx:value="Mushroom"/>
+                                    <String fx:value="Onion"/>
+                                    <String fx:value="BBQ Chicken"/>
+                                    <String fx:value="Spinach"/>
+                                    <String fx:value="Provolone"/>
+                                    <String fx:value="Olives"/>
+                                    <String fx:value="Bacon"/>
                                 </FXCollections>
                             </items>
                         </ListView>
@@ -87,22 +97,28 @@
                 </Pane>
                 <Pane prefHeight="200.0" prefWidth="403.0">
                     <children>
-                        <ListView fx:id="MyToppingsListNY" layoutX="102.0" layoutY="38.0" prefHeight="162.0" prefWidth="153.0" />
-                        <Text layoutX="120.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added Toppings" textAlignment="CENTER" wrappingWidth="146.18511962890625" />
-                        <Button fx:id="NYAddButton" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" onAction="#AddToppingToPizza" prefHeight="25.0" prefWidth="59.0" text="Add" />
-                        <Button fx:id="NYRemoveButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#RemoveToppingFromPizza" text="Remove" />
-                  <TextArea fx:id="NYOutput" layoutX="298.0" layoutY="42.0" prefHeight="155.0" prefWidth="99.0" />
+                        <ListView fx:id="MyToppingsListNY" layoutX="102.0" layoutY="38.0" prefHeight="162.0"
+                                  prefWidth="153.0"/>
+                        <Text layoutX="120.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Added Toppings" textAlignment="CENTER" wrappingWidth="146.18511962890625"/>
+                        <Button fx:id="NYAddButton" layoutX="14.0" layoutY="53.0" mnemonicParsing="false"
+                                onAction="#AddToppingToPizza" prefHeight="25.0" prefWidth="59.0" text="Add"/>
+                        <Button fx:id="NYRemoveButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false"
+                                onAction="#RemoveToppingFromPizza" text="Remove"/>
+                        <TextArea fx:id="NYOutput" layoutX="298.0" layoutY="42.0" prefHeight="155.0" prefWidth="99.0"/>
                     </children>
                 </Pane>
             </children>
         </FlowPane>
-      <Pane layoutX="34.0" layoutY="483.0" prefHeight="46.0" prefWidth="593.0">
-         <children>
-            <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price" />
-            <Text id="PriceOfPizzaNY" fx:id="PriceOfPizzaNY" layoutX="78.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8.99" wrappingWidth="30.13671875" />
-            <Button id="AddPizzaToOrderNY" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddPizzaToOrder" prefHeight="25.0" prefWidth="120.0" text="Add To Order" />
-            <Text layoutX="67.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
-         </children>
-      </Pane>
+        <Pane layoutX="17.0" layoutY="462.0" prefHeight="46.0" prefWidth="593.0">
+            <children>
+                <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price"/>
+                <Text id="PriceOfPizzaNY" fx:id="PriceOfPizzaNY" layoutX="78.0" layoutY="19.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="8.99" wrappingWidth="30.13671875"/>
+                <Button id="AddPizzaToOrderNY" layoutX="350.0" layoutY="2.0" mnemonicParsing="false"
+                        onAction="#AddPizzaToOrder" prefHeight="25.0" prefWidth="120.0" text="Add To Order"/>
+                <Text layoutX="67.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$"/>
+            </children>
+        </Pane>
     </children>
 </AnchorPane>

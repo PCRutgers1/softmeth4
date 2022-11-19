@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
+
 /**
  * The Controller class part of the MVC design pattern. This will
  * handle all the button on click events and will perform the necessary
@@ -21,31 +22,41 @@ public class CurrentOrderController {
     ListView<String> ListOfAllCurrentOrders;
 
     @FXML
-    Text subtotal, salesTax, orderTotal;
+    Text subtotal, salesTax, orderTotal, OrderOutput;
 
     /**
      * Event Handler for Placing the entire order
      */
     @FXML
-    private void placeOrder(ActionEvent e){
-        StoreOrder.allOrders.add(new Order());
-
+    private void placeOrder(ActionEvent e) {
+        if (Order.currentOrder.size() == 0)
+            OrderOutput.setText("No orders to place");
+        else {
+            StoreOrder.allOrders.add(new Order());
+            Order.currentOrder.clear();
+            clearOrder(e);
+            OrderOutput.setText("Order Place Successfully");
+        }
     }
 
     /**
      * It loads all the Pizza into a list view
      */
-    public void initialize(){
+    public void initialize() {
+        showAllCurrentOrders();
+    }
+
+    private void showAllCurrentOrders() {
         ArrayList<String> myCurrentOrder = new ArrayList<>();
         double totalPrice = 0;
-        for(Pizza p : Order.currentOrder){
+        for (Pizza p : Order.currentOrder) {
             myCurrentOrder.add(p.toString());
             totalPrice += p.price();
         }
         double tax = totalPrice * 0.06625;
         subtotal.setText(String.format("%.2f", totalPrice));
-        subtotal.setText(String.format("%.2f", tax));
-        orderTotal.setText(String.format("%.2f",totalPrice + tax));
+        salesTax.setText(String.format("%.2f", tax));
+        orderTotal.setText(String.format("%.2f", totalPrice + tax));
         ListOfAllCurrentOrders.setItems(
                 FXCollections.observableList(myCurrentOrder));
     }
@@ -54,8 +65,26 @@ public class CurrentOrderController {
      * Event Handler for Clears all items in current order
      */
     @FXML
-    private void clearOrder(ActionEvent e){
+    private void clearOrder(ActionEvent e) {
         Order.currentOrder.clear();
+        ListOfAllCurrentOrders.setItems(
+                FXCollections.observableList(new ArrayList<>()));
+        subtotal.setText("0");
+        salesTax.setText("0");
+        orderTotal.setText("0");
+    }
+
+    @FXML
+    private void removePizza(ActionEvent e) {
+        String pizzaToDelete = ListOfAllCurrentOrders.getSelectionModel().getSelectedItem();
+
+        for (Pizza p : Order.currentOrder) {
+            if (p.toString().equals(pizzaToDelete)) {
+                Order.currentOrder.remove(p);
+                showAllCurrentOrders();
+                return;
+            }
+        }
     }
 
 }

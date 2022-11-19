@@ -18,9 +18,24 @@ public class Order implements Customizable {
      */
     public Order(){
         this.orderId = Order.currIdMax;
+        this.currentOrderPizzas = new ArrayList<>();
         Order.currIdMax += 1;
         this.currentOrderPizzas.addAll(currentOrder);
-        Order.currentOrder.clear();
+    }
+    /**
+     * getter method for hte orderID
+     * @return this order's order id
+     */
+    public int getOrderId(){
+        return this.orderId;
+    }
+
+    /**
+     * getter method for hte orderID
+     * @return this order's order id
+     */
+    public ArrayList<Pizza> getCurrentOrderPizzas(){
+        return this.currentOrderPizzas;
     }
 
     /**

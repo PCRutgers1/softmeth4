@@ -112,6 +112,10 @@ public class NYPizzaController {
 
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
+        String pizzaType = ChoosePizzaNY.getValue();
+        if(pizzaType == null)
+            pizzaType = "Build Your Own Pizza";
+        setPizzaPrice(pizzaType,((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
         newPizza.setPrice(price);
 
         NYOutput.setText(NYOutput.getText() + "Successfully added Pizza To Order \n");

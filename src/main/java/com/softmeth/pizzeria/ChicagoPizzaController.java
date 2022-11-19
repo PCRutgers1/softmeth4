@@ -114,6 +114,10 @@ public class ChicagoPizzaController {
 
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
+        String pizzaType = ChoosePizzaChicago.getValue();
+        if(pizzaType == null)
+            pizzaType = "Build Your Own Pizza";
+        setPizzaPrice(pizzaType,((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
         newPizza.setPrice(price);
 
         ChicagoOutput.setText(ChicagoOutput.getText() + "Successfully added Pizza To Order \n");
