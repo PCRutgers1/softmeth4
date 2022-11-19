@@ -1,5 +1,9 @@
 package com.softmeth.pizzeria;
-
+/**
+ * It is as specific Deluxe Type of Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class Deluxe extends Pizza{
 
     private double price;

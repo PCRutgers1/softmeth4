@@ -1,7 +1,7 @@
 package com.softmeth.pizzeria;
 
 /**
- *
+ *Its an Interface that provides a template for the add and remove
  *
  * @author Peter Chen, Jonathon Lopez
  */
