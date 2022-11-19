@@ -32,7 +32,8 @@ public class CurrentOrderController {
         if (Order.currentOrder.size() == 0)
             OrderOutput.setText("No orders to place");
         else {
-            StoreOrder.allOrders.add(new Order());
+            String total = orderTotal.getText();
+            StoreOrder.allOrders.add(new Order(Double.parseDouble(total)));
             Order.currentOrder.clear();
             clearOrder(e);
             OrderOutput.setText("Order Place Successfully");

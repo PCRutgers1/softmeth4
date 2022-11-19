@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Order implements Customizable {
     public static int currIdMax = 0;
     private int orderId;
+    private double orderTotal;
     public static ArrayList<Pizza> currentOrder = new ArrayList<Pizza>();
     private ArrayList<Pizza> currentOrderPizzas;
 
@@ -16,20 +17,28 @@ public class Order implements Customizable {
      * Creates a new Current Order and gives it an ID
      *
      */
-    public Order(){
+    public Order(double orderTotal){
+        this.orderTotal = orderTotal;
         this.orderId = Order.currIdMax;
         this.currentOrderPizzas = new ArrayList<>();
         Order.currIdMax += 1;
         this.currentOrderPizzas.addAll(currentOrder);
     }
+
     /**
-     * getter method for hte orderID
+     * getter method for the orderID
      * @return this order's order id
      */
     public int getOrderId(){
         return this.orderId;
     }
-
+    /**
+     * getter method for the ordertotal
+     * @return this order's order total amount
+     */
+    public double getOrderTotal(){
+        return this.orderTotal;
+    }
     /**
      * getter method for hte orderID
      * @return this order's order id

@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="order currrent">
+    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="store orders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizzaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/StoreOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/StoreOrderView.fxml" afterDir="false" />
     </list>
-    <list id="aceb76cb-9982-4b2b-be6f-4685da26b86d" name="Changes by Jonathan_s PC" comment="comments">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Customizable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Customizable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" afterDir="false" />
-    </list>
+    <list id="aceb76cb-9982-4b2b-be6f-4685da26b86d" name="Changes by Jonathan_s PC" comment="comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668882391746</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="store orders">
+      <created>1668893695300</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668893695300</updated>
+    </task>
+    <task id="LOCAL-00016" summary="comments">
+      <created>1668893703870</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668893703870</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +230,7 @@
     <MESSAGE value="chicago finished" />
     <MESSAGE value="NY and coments" />
     <MESSAGE value="order currrent" />
+    <MESSAGE value="store orders" />
     <MESSAGE value="comments" />
     <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>

@@ -21,7 +21,9 @@
                      </font>
                   </Text>
                   <ComboBox fx:id="OrderNumber" layoutX="46.0" layoutY="46.0" onAction="#OrderNumChange" prefHeight="25.0" prefWidth="186.0" promptText="Select An Order Number" />
-                  <Text layoutX="337.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Total (Tax Included)" />
+                  <Text layoutX="337.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Total (Tax Included) $" />
+                  <Text fx:id="OrderTotalStore" layoutX="491.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text layoutX="63.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select An Order Number" />
                </children>
             </Pane>
          </children>
@@ -33,8 +35,8 @@
       </Pane>
       <Pane layoutY="302.0" prefHeight="92.0" prefWidth="599.0">
          <children>
-            <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" text="Cancel Order" />
-            <Button layoutX="360.0" layoutY="34.0" mnemonicParsing="false" text="Export Store Orders" />
+            <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" onAction="#cancelOrder" text="Cancel Order" />
+            <Button layoutX="360.0" layoutY="34.0" mnemonicParsing="false" onAction="#exportList" text="Export Store Orders" />
          </children>
       </Pane>
    </children>

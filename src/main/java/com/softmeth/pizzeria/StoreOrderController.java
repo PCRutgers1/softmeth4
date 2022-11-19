@@ -5,9 +5,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.text.Text;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * The Controller class part of the MVC design pattern. This will
@@ -23,7 +28,14 @@ public class StoreOrderController {
     @FXML
     ListView<String> StoreOrderList;
 
+    @FXML
+    Text OrderTotalStore;
+    private Order selectedOrder;
     public void initialize() {
+        setComboboxValues();
+    }
+
+    private void setComboboxValues(){
         ArrayList<Integer> AllOrderNums = new ArrayList<>();
 
         for (Order o : StoreOrder.allOrders) {
@@ -32,15 +44,16 @@ public class StoreOrderController {
 
         OrderNumber.setItems(FXCollections.observableList(AllOrderNums));
     }
-
     @FXML
     public void OrderNumChange(ActionEvent e){
-        ArrayList<String> newOrderList = new ArrayList<>();
-        int newOrderNumSelected = OrderNumber.getValue();
+        if (OrderNumber.getValue() != null)
+            updateListView(OrderNumber.getValue());
+    }
 
-        Order selectedOrder = null;
+    private void updateListView(int orderValue){
+        ArrayList<String> newOrderList = new ArrayList<>();
         for(Order o: StoreOrder.allOrders){
-            if (o.getOrderId() == newOrderNumSelected){
+            if (o.getOrderId() == orderValue){
                 selectedOrder = o;
                 break;
             }
@@ -49,8 +62,42 @@ public class StoreOrderController {
         for(Pizza p: selectedOrder.getCurrentOrderPizzas()){
             newOrderList.add(p.toString());
         }
-        StoreOrderList.setItems(FXCollections.observableList(newOrderList));
 
+        StoreOrderList.setItems(FXCollections.observableList(newOrderList));
+        OrderTotalStore.setText(String.format("%.2f", selectedOrder.getOrderTotal()));
+    }
+
+    @FXML
+    private void cancelOrder(ActionEvent e){
+        if (OrderNumber.getValue() == null)
+                return;
+        int orderToDelete = OrderNumber.getValue();
+        for(Order n :StoreOrder.allOrders){
+            if (n.getOrderId() == orderToDelete){
+                StoreOrder.allOrders.remove(n);
+                break;
+            }
+        }
+        OrderNumber.getSelectionModel().selectFirst();
+        setComboboxValues();
+        StoreOrderList.setItems(FXCollections.observableList(new ArrayList<>()));
+        OrderTotalStore.setText("0.00");
+    }
+
+    @FXML
+    private void exportList(){
+        try(Writer writer = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream("StoreOrders.txt"), StandardCharsets.UTF_8))){
+            for(Order ord: StoreOrder.allOrders){
+                writer.write("Order ID of " + ord.getOrderId() + "\n");
+                for(Pizza p: ord.getCurrentOrderPizzas()){
+                    writer.write(p.toString() + "\n");
+                }
+                writer.write("Order Total With Tax: "+ord.getOrderTotal()+"\n");
+            }
+        }catch(Exception e){
+
+        }
     }
 
 }
