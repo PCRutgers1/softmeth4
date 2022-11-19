@@ -14,9 +14,10 @@ public enum Topping {
     BEEF("Beef"),
     HAM("Ham"),
     GREEN_PEPPER("Green Pepper"),
+    GREEN_PEPPERS("Green Peppers"),
     PEPPERS("Peppers"),
     MUSHROOM("Mushroom"),
-    ONIONS("Onions"),
+    ONION("Onion"),
     BBQ_CHICKEN("BBQ Chicken"),
     SPINACH("Spinach"),
     PROVOLONE("Provolone"),
@@ -29,7 +30,13 @@ public enum Topping {
     public static final String[] meatzzaToppings = {"Sausage", "Pepperoni", "Beef", "Ham"};
     public static final String[] bbqToppings = {"BBQ Chicken", "Green Pepper", "Provolone", "Cheddar"};
     private final String topping;
-
+    /**
+     * gets the toppings that we want as string
+     * @return returns the string of the current topping
+     */
+    public String getTopping(){
+        return this.topping;
+    }
     /**
      * Simple constructor for each of our enum values that records the topping
      * being placed on a pizza and sets the topping
@@ -49,7 +56,7 @@ public enum Topping {
         Topping[] allToppings = Topping.values();
 
         for (Topping t : allToppings) {
-            if (t.name().equalsIgnoreCase(topping)) return t;
+            if (t.topping.equalsIgnoreCase(topping)) return t;
         }
         return INVALID;
     }

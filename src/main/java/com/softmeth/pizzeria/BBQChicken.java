@@ -2,15 +2,17 @@ package com.softmeth.pizzeria;
 
 public class BBQChicken extends Pizza{
     private double price;
-
+    private String pizzaType;
     /**
      * Set all the Attributes of a BBQ Chicken Pizza
      *
      * @param toppings the list of all the Toppings of a pizza
      * @param crust the Crust of the pizza
+     * @param pizzaType Whether the pizza is
      */
-    public BBQChicken(String[] toppings, Crust crust) {
+    public BBQChicken(String[] toppings, Crust crust, String pizzaType) {
         super(toppings, crust);
+        this.pizzaType = pizzaType;
     }
 
     /**
@@ -39,6 +41,14 @@ public class BBQChicken extends Pizza{
     @Override
     public double price() {
         return this.price;
+    }
+    /**
+     * This method gets the type of pizza and returns it
+     * is NEw york or chicago
+     */
+    @Override
+    public String getPizzaType() {
+        return this.pizzaType;
     }
 
     /**

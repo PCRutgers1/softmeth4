@@ -14,6 +14,12 @@ public class Order implements Customizable {
         this.currentOrderPizzas.addAll(currentOrder);
         Order.currentOrder.clear();
     }
+
+    /**
+     * This method adds an object obj to the order
+     * @param obj the Object being added
+     * @return true if the object is added, otherwise false
+     */
     @Override
     public boolean add(Object obj) {
         try {

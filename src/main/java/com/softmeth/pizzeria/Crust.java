@@ -10,7 +10,13 @@ public enum Crust {
     BROOKLYN("Brooklyn"), THIN("Thin"), HAND_TOSSED("Hand Tossed"), PAN("Pan"),
     STUFFED("Stuffed"), DEEP_DISH("Deep Dish"), INVALID("None");
     private final String crust;
-
+    /**
+     * gets the string name for the current pizza crust
+     * @return returns the string name of the crust
+     */
+    public String getCrust(){
+        return this.crust;
+    }
     /**
      * Simple constructor for each of our enum values that records the crust
      * of a pizza and sets the crust

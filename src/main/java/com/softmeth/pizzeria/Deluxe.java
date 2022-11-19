@@ -3,17 +3,26 @@ package com.softmeth.pizzeria;
 public class Deluxe extends Pizza{
 
     private double price;
-
+    private String pizzaType;
     /**
      * Set all the Attributes of a Deluxe Pizza
      *
      * @param toppings the list of all the Toppings of a pizza
      * @param crust the Crust of the pizza
+     * @param  pizzaType whether the pizza os chicago or NY style
      */
-    public Deluxe(String[] toppings, Crust crust) {
+    public Deluxe(String[] toppings, Crust crust, String pizzaType) {
         super(toppings, crust);
+        this.pizzaType = pizzaType;
     }
-
+    /**
+     * This method gets the type of pizza and returns it
+     * is NEw york or chicago
+     */
+    @Override
+    public String getPizzaType(){
+        return this.pizzaType;
+    }
     /**
      * setter method for Price
      * sets the price of the Deluxe Pizza

@@ -6,12 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="chicago finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/NYView.fxml" afterDir="false" />
-    </list>
-    <list id="aceb76cb-9982-4b2b-be6f-4685da26b86d" name="Changes by Jonathan_s PC" comment="NY">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Crust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Crust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Deluxe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" afterDir="false" />
+    </list>
+    <list id="aceb76cb-9982-4b2b-be6f-4685da26b86d" name="Changes by Jonathan_s PC" comment="NY and coments">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Crust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Crust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Customizable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Customizable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaStoreMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/PizzaStoreMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Size.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +54,109 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizza.java">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="9" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="11" end1="12" start2="14" end2="15" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="14" end1="14" start2="17" end2="23" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="18" end1="19" start2="27" end2="28" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="22" end1="22" start2="31" end2="37" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="26" end1="27" start2="41" end2="42" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="30" end1="30" start2="45" end2="50" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="33" end1="34" start2="53" end2="54" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BuildYourOwn.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="5" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="8" end1="8" start2="10" end2="11" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="9" end1="10" start2="12" end2="13" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="11" end1="11" start2="14" end2="15" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="12" end1="14" start2="16" end2="24" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="16" end1="17" start2="26" end2="28" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="19" end1="20" start2="30" end2="31" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="22" end1="25" start2="33" end2="33" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="28" end1="28" start2="36" end2="37" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="37" end1="37" start2="46" end2="47" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="51" end1="52" start2="61" end2="62" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Topping.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="16" end1="16" start2="16" end2="17" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="18" end1="19" start2="19" end2="20" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="31" end1="32" start2="32" end2="39" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="51" end1="52" start2="58" end2="59" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/BBQChicken.java">
+      <ranges>
+        <range start1="1" end1="2" start2="1" end2="6" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="4" end1="5" start2="8" end2="9" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="10" end1="10" start2="14" end2="15" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="11" end1="12" start2="16" end2="17" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="13" end1="13" start2="18" end2="19" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="42" end1="42" start2="48" end2="56" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java">
+      <ranges>
+        <range start1="10" end1="10" start2="10" end2="11" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="11" end1="11" start2="12" end2="18" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="13" end1="14" start2="20" end2="26" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="16" end1="17" start2="28" end2="36" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="21" end1="22" start2="40" end2="79" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="23" end1="24" start2="80" end2="85" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="25" end1="26" start2="86" end2="94" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="8" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="10" end1="10" start2="14" end2="18" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="16" end1="16" start2="24" end2="30" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="26" end1="26" start2="40" end2="45" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="6" end1="6" start2="7" end2="8" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="7" end1="7" start2="9" end2="18" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="9" end1="10" start2="20" end2="28" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="16" end1="16" start2="34" end2="51" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="17" end1="17" start2="52" end2="55" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/NYPizza.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="10" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="7" end1="8" start2="14" end2="15" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="10" end1="10" start2="17" end2="23" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="14" end1="15" start2="27" end2="28" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="18" end1="18" start2="31" end2="37" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="22" end1="23" start2="41" end2="42" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="26" end1="26" start2="45" end2="50" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="29" end1="30" start2="53" end2="54" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Crust.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+        <range start1="12" end1="13" start2="12" end2="19" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Meatzza.java">
+      <ranges>
+        <range start1="4" end1="5" start2="4" end2="5" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="11" end1="12" start2="11" end2="12" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="13" end1="13" start2="13" end2="14" changelist="d98359ff-2fce-48ca-ac26-320c56062ef9" />
+        <range start1="14" end1="14" start2="15" end2="28" changelist="aceb76cb-9982-4b2b-be6f-4685da26b86d" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -161,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668877049936</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="chicago finished">
+      <created>1668877544018</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668877544018</updated>
+    </task>
+    <task id="LOCAL-00012" summary="NY and coments">
+      <created>1668877553432</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668877553432</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,9 +328,10 @@
     <MESSAGE value="chicago deluxe" />
     <MESSAGE value="added comments" />
     <MESSAGE value="can select toppings and shit" />
-    <MESSAGE value="chicago finished" />
     <MESSAGE value="NY" />
-    <option name="LAST_COMMIT_MESSAGE" value="NY" />
+    <MESSAGE value="chicago finished" />
+    <MESSAGE value="NY and coments" />
+    <option name="LAST_COMMIT_MESSAGE" value="NY and coments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

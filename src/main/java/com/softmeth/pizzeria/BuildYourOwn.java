@@ -1,31 +1,39 @@
 package com.softmeth.pizzeria;
 
-public class BuildYourOwn extends Pizza{
+public class BuildYourOwn extends Pizza {
+    private double price;
+    private String pizzaType;
 
     /**
      * Set all the Attributes of a Build Your Own Pizza
      *
      * @param crust the Crust of the pizza
+     * @param pizzaType is the type of pizza whether NY or Chicago
      */
-    public BuildYourOwn(Crust crust) {
+    public BuildYourOwn(Crust crust, String pizzaType) {
         super(crust);
+        this.pizzaType = pizzaType;
     }
-    private double price;
-
+    /**
+     * This method gets the type of pizza and returns it
+     * is NEw york or chicago
+     */
+    @Override
+    public String getPizzaType(){
+        return this.pizzaType;
+    }
     /**
      * setter method for Price
      * sets the price of the Meatzza Pizza
      * @param price the price of the Pizza
      */
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
-    }
-    public double getPrice(){
-        return  this.price;
     }
 
     /**
      * This method adds an object to something
+     *
      * @param obj the Object being added
      */
     @Override
@@ -35,6 +43,7 @@ public class BuildYourOwn extends Pizza{
 
     /**
      * This method removes an object from something
+     *
      * @param obj the Object being removed
      */
     @Override
@@ -49,6 +58,6 @@ public class BuildYourOwn extends Pizza{
      */
     @Override
     public double price() {
-        return 0;
+        return this.price;
     }
 }

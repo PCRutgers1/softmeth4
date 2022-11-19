@@ -28,12 +28,12 @@
             </Pane>
             <Pane prefHeight="74.0" prefWidth="600.0">
                <children>
-                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal" />
-                  <Text id="currentOrderSubtotal" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text layoutX="192.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Tax" />
-                  <Text id="currentOrderSalesTax" layoutX="264.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Order Total" />
-                  <Text id="currentOrderTotal" layoutX="86.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal $" />
+                  <Text id="currentOrderSubtotal" fx:id="subtotal" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text layoutX="192.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Tax $" />
+                  <Text id="currentOrderSalesTax" fx:id="salesTax" layoutX="264.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text layoutX="11.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Order Total $" />
+                  <Text id="currentOrderTotal" fx:id="orderTotal" layoutX="138.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="11.0" />
                   <Button layoutX="213.0" layoutY="39.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="25.0" prefWidth="113.0" text="Place Order" />
                   <Button layoutX="432.0" layoutY="10.0" mnemonicParsing="false" text="Remove Pizza" />
                   <Button layoutX="432.0" layoutY="39.0" mnemonicParsing="false" onAction="#clearOrder" prefHeight="25.0" prefWidth="89.0" text="Clear Order" />

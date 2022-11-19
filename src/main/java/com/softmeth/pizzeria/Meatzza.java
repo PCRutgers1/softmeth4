@@ -2,15 +2,16 @@ package com.softmeth.pizzeria;
 
 public class Meatzza extends Pizza{
     private double price;
-
+    private String pizzaType;
     /**
      * Set all the Attributes of a Meatzza Pizza
      *
      * @param toppings the list of all the Toppings of a pizza
      * @param crust the Crust of the pizza
      */
-    public Meatzza(String[] toppings, Crust crust) {
+    public Meatzza(String[] toppings, Crust crust, String pizzaType) {
         super(toppings, crust);
+        this.pizzaType = pizzaType;
     }
     public void setPrice(double price){
         this.price = price;
