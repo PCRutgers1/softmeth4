@@ -43,6 +43,7 @@ public class MainController {
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
             stage.setTitle("Order New York Style Pizza");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         }catch(Exception ignored){
@@ -58,6 +59,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("CurrentOrderView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle("View Current Order");
             stage.setScene(scene);
             stage.show();
@@ -75,6 +77,7 @@ public class MainController {
             FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("StoreOrderView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle("View ALl Store Orders");
             stage.setScene(scene);
             stage.show();

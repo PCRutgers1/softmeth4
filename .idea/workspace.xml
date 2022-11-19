@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="store orders">
+    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="finished project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/StoreOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/StoreOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/MainController.java" afterDir="false" />
     </list>
     <list id="aceb76cb-9982-4b2b-be6f-4685da26b86d" name="Changes by Jonathan_s PC" comment="comments" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668893703870</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="finished project">
+      <created>1668901756350</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668901756350</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +235,8 @@
     <MESSAGE value="order currrent" />
     <MESSAGE value="store orders" />
     <MESSAGE value="comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments" />
+    <MESSAGE value="finished project" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
