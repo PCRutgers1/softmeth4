@@ -11,7 +11,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * The Controller class part of the MVC design pattern. This will
+ * handle all the button on click events and will perform the necessary
+ * checks to determine which methods should be called. Upon determination,
+ * it will call the corresponding model to create/alter that data
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class ChicagoPizzaController {
     @FXML
     private ToggleGroup ChicagoPizzaSize;
@@ -35,6 +42,9 @@ public class ChicagoPizzaController {
     private double price;
     Set<Topping> toppings = new HashSet<Topping>();
 
+    /**
+     * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
+     */
     @FXML
     private void updatePricing(ActionEvent e){
         String pizzaType = ChoosePizzaChicago.getValue();
@@ -44,6 +54,9 @@ public class ChicagoPizzaController {
     }
 
 
+    /**
+     *  Event Handler for the Adding Toppings to a Build Your Own Pizza
+     */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
         if (MyToppingsListChicago.getItems().size() == 6) {
@@ -62,6 +75,9 @@ public class ChicagoPizzaController {
         setPizzaPrice("Build Your Own Pizza", ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
 
+    /**
+     *  Event Handler for the Removing Toppings from a Build Your Own Pizza
+     */
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e) {
         ChicagoAddButton.setDisable(false);
@@ -76,10 +92,11 @@ public class ChicagoPizzaController {
 
 
 
-    @FXML
     /**
      * Event Handler for the Add to order button
-     */ private void AddPizzaToOrder() {
+     */
+    @FXML
+    private void AddPizzaToOrder() {
         pizzaSize = (RadioButton) ChicagoPizzaSize.getSelectedToggle();
         String sizeOfPizza = pizzaSize.getText();
         String selectedPizzaType = ChoosePizzaChicago.getValue();
@@ -103,11 +120,17 @@ public class ChicagoPizzaController {
         Order.currentOrder.add(newPizza);
     }
 
+    /**
+     *  Sets enables or disables the add and remove toppings button
+     */
     private void setButtons(Boolean state) {
         ChicagoAddButton.setDisable(state);
         ChicagoRemoveButton.setDisable(state);
     }
 
+    /**
+     *  Sets the price depending on toppings and pizza chosen
+     */
     private void setPizzaPrice(String pizzaType, String size) {
         if (pizzaType.equals("Build Your Own Pizza")) {
             if (size.equals("Large")) price = 12.99;
@@ -133,6 +156,9 @@ public class ChicagoPizzaController {
 
     }
 
+    /**
+     *  Sets the toppings depending on what pizza is chosen
+     */
     private void setToppings(String pizzaType) {
         toppings = new HashSet<>();
         ArrayList<String> toppingsAsString = new ArrayList<String>();
@@ -156,6 +182,9 @@ public class ChicagoPizzaController {
                 FXCollections.observableList(toppingsAsString));
     }
 
+    /**
+     * Event Handler It updates all output shown and whether a user hs the ability to chose toppings
+     */
     @FXML
     void ChangePizzaSelection(ActionEvent e) {
         String pizzaType = ChoosePizzaChicago.getValue();

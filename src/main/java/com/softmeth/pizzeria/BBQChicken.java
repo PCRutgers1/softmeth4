@@ -1,5 +1,9 @@
 package com.softmeth.pizzeria;
-
+/**
+ * It is as specific BBQ Chicken Type of Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class BBQChicken extends Pizza{
     private double price;
     private String pizzaType;

@@ -50,6 +50,9 @@ public class CurrentOrderController {
                 FXCollections.observableList(myCurrentOrder));
     }
 
+    /**
+     * Event Handler for Clears all items in current order
+     */
     @FXML
     private void clearOrder(ActionEvent e){
         Order.currentOrder.clear();

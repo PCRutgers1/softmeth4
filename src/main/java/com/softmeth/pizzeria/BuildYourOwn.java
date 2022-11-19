@@ -1,5 +1,9 @@
 package com.softmeth.pizzeria;
-
+/**
+ * It is as specific Build Your Own Type of Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class BuildYourOwn extends Pizza {
     private double price;
     private String pizzaType;
@@ -24,7 +28,8 @@ public class BuildYourOwn extends Pizza {
     }
     /**
      * setter method for Price
-     * sets the price of the Meatzza Pizza
+     * sets the price of the Build Your Own Pizza
+     *
      * @param price the price of the Pizza
      */
     public void setPrice(double price) {

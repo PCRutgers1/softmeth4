@@ -1,7 +1,7 @@
 package com.softmeth.pizzeria;
 
 /**
- * This is the Topping enum class which contains all of the different Toppings
+ * This is the Topping enum class which contains all the different Toppings
  * that are being offered for a pizza with each of them stored as values
  *
  * @author Peter Chen,Jonathan Lopez

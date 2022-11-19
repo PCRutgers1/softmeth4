@@ -10,12 +10,30 @@ public abstract class Pizza implements Customizable {
     private Size size;
 
     public abstract double price();
+
+    public abstract String getPizzaType();
+
+    /**
+     * Abstract class template other classes must follow
+     */
     public abstract void setPrice(double price);
 
-    public Pizza(Crust crust){
+    /**
+     * Set all the Attributes of a Pizza
+     *
+     * @param crust The Crust of the pizza
+     */
+    public Pizza(Crust crust) {
         this.crust = crust;
     }
-    public void setToppings(Set<Topping> toppings){
+
+    /**
+     * setter method for toppings
+     * sets the toppings of a Pizza
+     *
+     * @param toppings the Toppings of a Pizza
+     */
+    public void setToppings(Set<Topping> toppings) {
         this.toppings = new ArrayList<>();
         this.toppings.addAll(toppings);
     }
@@ -66,7 +84,14 @@ public abstract class Pizza implements Customizable {
                 this.toppings.add(Topping.findTopping(t));
             }
     }
-    public void setSize(Size size){
+
+    /**
+     * setter method for Size
+     * sets the size of a Pizza
+     *
+     * @param size the Size of a Pizza
+     */
+    public void setSize(Size size) {
         this.size = size;
     }
 

@@ -1,13 +1,21 @@
 package com.softmeth.pizzeria;
 
 import java.util.ArrayList;
-
+/**
+ *
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class Order implements Customizable {
     public static int currIdMax = 0;
     private int orderId;
     public static ArrayList<Pizza> currentOrder = new ArrayList<Pizza>();
     private ArrayList<Pizza> currentOrderPizzas;
 
+    /**
+     * Creates a new Current Order and gives it an ID
+     *
+     */
     public Order(){
         this.orderId = Order.currIdMax;
         Order.currIdMax += 1;
@@ -30,6 +38,11 @@ public class Order implements Customizable {
         }
     }
 
+    /**
+     * This method adds an object obj to the order
+     * @param obj the Object being added
+     * @return true if the object is removed, otherwise false
+     */
     @Override
     public boolean remove(Object obj) {
         try {

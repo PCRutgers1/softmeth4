@@ -1,5 +1,9 @@
 package com.softmeth.pizzeria;
-
+/**
+ * It is as specific Meatzza Type of Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class Meatzza extends Pizza{
     private double price;
     private String pizzaType;
@@ -13,6 +17,19 @@ public class Meatzza extends Pizza{
         super(toppings, crust);
         this.pizzaType = pizzaType;
     }
+    /**
+     * This method gets the type of pizza and returns it
+     * is NEw york or chicago
+     */
+    @Override
+    public String getPizzaType(){
+        return this.pizzaType;
+    }
+    /**
+     * setter method for Price
+     * sets the price of the Meatzza Pizza
+     * @param price the price of the Pizza
+     */
     public void setPrice(double price){
         this.price = price;
     }

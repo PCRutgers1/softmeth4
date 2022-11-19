@@ -5,10 +5,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+/**
+ * The Controller class part of the MVC design pattern. This will
+ * handle all the button on click events and will perform the necessary
+ * checks to determine which methods should be called. Upon determination,
+ * it will call the corresponding model to create/alter that data
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class MainController {
     String[] orderOptions = {"Build Your Own Pizza", "Deluxe", "BBQ Chicken", "Meatzza"};
 
+    /**
+     * Event Handler to open Chicago Order Screen
+     */
     @FXML
     void orderChicagoPizza(ActionEvent e){
         try {
@@ -22,6 +32,10 @@ public class MainController {
         }catch(Exception ignored){
         }
     }
+
+    /**
+     * Event Handler to open New York Order Screen
+     */
     @FXML
     void orderNYPizza(ActionEvent e){
         try {
@@ -34,6 +48,10 @@ public class MainController {
         }catch(Exception ignored){
         }
     }
+
+    /**
+     * Event Handler to open Current Order Screen
+     */
     @FXML
     void viewCurrentOrder(ActionEvent e){
         try {
@@ -47,6 +65,10 @@ public class MainController {
         }
 
     }
+
+    /**
+     * Event Handler to open All Store Order Screen
+     */
     @FXML
     void viewStoreOrders(ActionEvent e){
         try {

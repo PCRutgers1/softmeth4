@@ -15,6 +15,12 @@ public class ChicagoPizza implements PizzaFactory{
         return new Deluxe(toppings,crust, "Chicago");
     }
 
+    /**
+     * Creates a new pizza of type Meatzaa and corresponding
+     * toppings of Sausage, Pepperoni, Beef, and Ham
+     * and crust of Stuffed
+     * @return returns the new Meatzza pizza
+     */
     @Override
     public Pizza createMeatzza() {
         String [] toppings = {"Sausage", "Pepperoni", "Beef", "Ham"};
@@ -23,6 +29,12 @@ public class ChicagoPizza implements PizzaFactory{
         return meatzza;
     }
 
+    /**
+     * Creates a new pizza of type BBQ Chicken and corresponding
+     * toppings of BBQ Chicken, Green Pepper, Provolone, and Cheddar
+     * and crust of Pan
+     * @return returns the new BBQ Chicken pizza
+     */
     @Override
     public Pizza createBBQChicken() {
         String [] toppings = {"BBQ Chicken", "Green Pepper", "Provolone", "Cheddar"};
@@ -31,6 +43,11 @@ public class ChicagoPizza implements PizzaFactory{
         return bbq;
     }
 
+    /**
+     * Creates a new pizza of type Build Your Own and corresponding
+     * toppings of users choosing and crust of Pan
+     * @return returns the new Build Your Own pizza
+     */
     @Override
     public Pizza createBuildYourOwn() {
         Crust crust = Crust.PAN;

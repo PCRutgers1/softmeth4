@@ -9,6 +9,9 @@ import java.io.IOException;
 
 public class PizzaStoreMain extends Application {
 
+    /**
+     * Shows the initial landing screen and sets the title for the screen
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PizzaStoreMain.class.getResource("MainView.fxml"));
@@ -18,6 +21,10 @@ public class PizzaStoreMain extends Application {
         stage.setResizable(false);
         stage.show();   
     }
+
+    /**
+     * Launcher of the program
+     */
     public static void main(String[] args){
         launch();
     }
