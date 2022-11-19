@@ -1,7 +1,7 @@
 package com.softmeth.pizzeria;
 
 /**
- * This is the Size enum class which contains all of the different Crusts
+ * This is the Crust enum class which contains all of the different Crusts
  * that are being offered for a pizza with each of them stored as values
  *
  * @author Peter Chen,Jonathan Lopez
