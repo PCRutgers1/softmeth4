@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="can select toppings and shit">
+    <list default="true" id="d98359ff-2fce-48ca-ac26-320c56062ef9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/ChicagoPizzaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/CurrentOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softmeth/pizzeria/StoreOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/ChicagoView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/softmeth/pizzeria/CurrentOrderView.fxml" afterDir="false" />
     </list>
-    <list id="90164af0-7cd3-4633-bf9a-e4ff94efc38c" name="Changes by lopez" comment="added comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

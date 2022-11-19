@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -85,12 +86,14 @@
                         </ListView>
                     </children>
                 </Pane>
-                <Pane prefHeight="200.0" prefWidth="316.0">
+                <Pane prefHeight="200.0" prefWidth="404.0">
                     <children>
-                        <ListView fx:id="MyToppingsListChicago" layoutX="102.0" layoutY="38.0" prefHeight="162.0" prefWidth="200.0" />
+                        <ListView fx:id="MyToppingsListChicago" layoutX="102.0" layoutY="38.0" prefHeight="162.0" prefWidth="146.0" />
                         <Text layoutX="120.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added Toppings" textAlignment="CENTER" wrappingWidth="146.18511962890625" />
                         <Button fx:id="ChicagoAddButton" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" onAction="#AddToppingToPizza" prefHeight="25.0" prefWidth="59.0" text="Add" />
                         <Button fx:id="ChicagoRemoveButton" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" onAction="#RemoveToppingFromPizza" text="Remove" />
+                  <TextArea fx:id="ChicagoOutput" layoutX="278.0" layoutY="40.0" prefHeight="155.0" prefWidth="107.0" />
+                  <Text layoutX="309.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output" />
                     </children>
                 </Pane>
             </children>
@@ -98,8 +101,9 @@
       <Pane layoutX="24.0" layoutY="473.0" prefHeight="46.0" prefWidth="593.0">
          <children>
             <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price" />
-            <Text fx:id="PriceOfPizzaChicago" layoutX="81.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="PriceOfPizzaChicago" layoutX="91.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8.99" />
             <Button id="AddPizzaToOrderChicago" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddPizzaToOrder" prefHeight="25.0" prefWidth="120.0" text="Add To Order" />
+            <Text layoutX="78.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" />
          </children>
       </Pane>
     </children>

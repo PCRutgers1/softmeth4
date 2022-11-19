@@ -15,6 +15,7 @@ public abstract class Pizza implements Customizable {
         this.crust = crust;
     }
     public void setToppings(Set<Topping> toppings){
+        this.toppings = new ArrayList<>();
         this.toppings.addAll(toppings);
     }
 

@@ -27,6 +27,9 @@ public class ChicagoPizzaController {
     @FXML
     private Text TypeOfCrustChicago, PriceOfPizzaChicago;
 
+    @FXML
+    private TextArea ChicagoOutput;
+
     RadioButton pizzaSize;
 
     private double price;
@@ -68,6 +71,7 @@ public class ChicagoPizzaController {
             MyToppingsListChicago.getItems().remove(topping);
         }
         toppings.remove(Topping.findTopping(topping));
+        setPizzaPrice("Build Your Own Pizza", ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
 
 
@@ -94,6 +98,8 @@ public class ChicagoPizzaController {
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
         newPizza.setPrice(price);
+
+        ChicagoOutput.setText(ChicagoOutput.getText() + "Successfully added Pizza To Order \n");
         Order.currentOrder.add(newPizza);
     }
 
@@ -123,7 +129,7 @@ public class ChicagoPizzaController {
             else if (size.equals("Medium")) price = 17.99;
             else price = 15.99;
         }
-        PriceOfPizzaChicago.setText(Double.toString(price));
+        PriceOfPizzaChicago.setText(String.format("%.2f", price));
 
     }
 
