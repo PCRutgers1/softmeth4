@@ -1,5 +1,10 @@
 package com.softmeth.pizzeria;
 
+/**
+ * It allows you to create a specific type of New York Style Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class NYPizza implements PizzaFactory{
 
     /**

@@ -42,7 +42,19 @@ public class ChicagoPizzaController {
 
     private double price;
     Set<Topping> toppings = new HashSet<Topping>();
-
+    private static int Empty = 0;
+    private static int Invalid_Topping_Size = 6;
+    public static final double PIZZA_TOPPING_PRICE = 1.59;
+    public static final double PIZZA_LARGE_PRICE = 17.99;
+    public static final double PIZZA_SMALL_PRICE = 8.99;
+    public static final double PIZZA_MEDIUM_PRICE = 15.99;
+    public static final double PIZZA_SUPER_PRICE = 19.99;
+    public static final double PIZZA_FOURTEEN_PRICE = 14.99;
+    public static final double PIZZA_THIRTEEN_PRICE = 13.99;
+    public static final double PIZZA_TWELVE_PRICE = 12.99;
+    public static final double PIZZA_EIGHTEEN_PRICE = 18.99;
+    public static final double PIZZA_TEN_PRICE = 10.99;
+    public static final double PIZZA_SIXTEEN_PRICE = 16.99;
 
     /**
      * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
@@ -52,7 +64,7 @@ public class ChicagoPizzaController {
     @FXML
     private void updatePricing(ActionEvent e) {
         String pizzaType = ChoosePizzaChicago.getValue();
-        if(pizzaType == null)
+        if (pizzaType == null)
             pizzaType = "Build Your Own Pizza";
         setPizzaPrice(pizzaType, ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
@@ -65,14 +77,14 @@ public class ChicagoPizzaController {
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
-        if (MyToppingsListChicago.getItems().size() == 6) {
+        if (MyToppingsListChicago.getItems().size() == Invalid_Topping_Size) {
             ChicagoAddButton.setDisable(true);
         } else {
             ChicagoAddButton.setDisable(false);
         }
         String topping =
                 ToppingsListChicago.getSelectionModel().getSelectedItem();
-        if(topping == null)
+        if (topping == null)
             return;
         if (!toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListChicago.getItems().add(topping);
@@ -124,7 +136,7 @@ public class ChicagoPizzaController {
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
         String pizzaType = ChoosePizzaChicago.getValue();
-        if(pizzaType == null)
+        if (pizzaType == null)
             pizzaType = "Build Your Own Pizza";
         setPizzaPrice(pizzaType, ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
         newPizza.setPrice(price);

@@ -1,8 +1,10 @@
 package com.softmeth.pizzeria;
 
 import java.util.ArrayList;
+
 /**
- *
+ * It creates a singular instance of order that keeps tracks of all the Pizzas that are added to it,
+ * and it associates the pizzas to an order ID that gets sent to the store order class
  *
  * @author Peter Chen, Jonathon Lopez
  */
@@ -33,7 +35,7 @@ public class Order implements Customizable {
         return this.orderId;
     }
     /**
-     * getter method for the ordertotal
+     * getter method for the order total
      * @return this order's order total amount
      */
     public double getOrderTotal(){

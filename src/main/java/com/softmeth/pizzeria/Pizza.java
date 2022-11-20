@@ -3,7 +3,11 @@ package com.softmeth.pizzeria;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Set;
-
+/**
+ * It creates an instance of Pizza
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public abstract class Pizza implements Customizable {
     private ArrayList<Topping> toppings;
     private Crust crust;

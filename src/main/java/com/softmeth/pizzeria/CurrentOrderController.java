@@ -23,6 +23,8 @@ public class CurrentOrderController {
 
     @FXML
     Text subtotal, salesTax, orderTotal, OrderOutput;
+    private final static double TAX_RATE = 0.06625;
+    private static int Empty = 0;
 
     /**
      * Event Handler for Placing the entire order
@@ -30,7 +32,7 @@ public class CurrentOrderController {
      */
     @FXML
     private void placeOrder(ActionEvent e) {
-        if (Order.currentOrder.size() == 0)
+        if (Order.currentOrder.size() == Empty)
             OrderOutput.setText("No orders to place");
         else {
             String total = orderTotal.getText();

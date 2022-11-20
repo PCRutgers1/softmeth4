@@ -5,6 +5,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Creates an instance Store Order that store all orders that have been placed by their order IDs
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class StoreOrder implements Customizable {
 
     public static ArrayList<Order> allOrders = new ArrayList<>();

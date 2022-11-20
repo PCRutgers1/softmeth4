@@ -7,6 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Launch's the RU Pizza application
+ *
+ * @author Peter Chen, Jonathon Lopez
+ */
 public class PizzaStoreMain extends Application {
 
     /**

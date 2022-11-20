@@ -39,6 +39,19 @@ public class NYPizzaController {
 
     private double price;
     Set<Topping> toppings = new HashSet<Topping>();
+    private static int Empty = 0;
+    private static int Invalid_Topping_Size = 6;
+    public static final double PIZZA_TOPPING_PRICE = 1.59;
+    public static final double PIZZA_LARGE_PRICE = 17.99;
+    public static final double PIZZA_SMALL_PRICE = 8.99;
+    public static final double PIZZA_MEDIUM_PRICE = 15.99;
+    public static final double PIZZA_SUPER_PRICE = 19.99;
+    public static final double PIZZA_FOURTEEN_PRICE = 14.99;
+    public static final double PIZZA_THIRTEEN_PRICE = 13.99;
+    public static final double PIZZA_TWELVE_PRICE = 12.99;
+    public static final double PIZZA_EIGHTEEN_PRICE = 18.99;
+    public static final double PIZZA_TEN_PRICE = 10.99;
+    public static final double PIZZA_SIXTEEN_PRICE = 16.99;
 
     /**
      * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
@@ -47,7 +60,7 @@ public class NYPizzaController {
     @FXML
     private void updatePricing(ActionEvent e){
         String pizzaType = ChoosePizzaNY.getValue();
-        if(pizzaType == null)
+        if (pizzaType == null)
             pizzaType = "Build Your Own Pizza";
         setPizzaPrice(pizzaType,((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
     }
@@ -59,14 +72,14 @@ public class NYPizzaController {
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
-        if (MyToppingsListNY.getItems().size() == 6) {
+        if (MyToppingsListNY.getItems().size() == Invalid_Topping_Size) {
             NYAddButton.setDisable(true);
         } else {
             NYAddButton.setDisable(false);
         }
         String topping =
                 ToppingsListNY.getSelectionModel().getSelectedItem();
-        if(topping == null)
+        if (topping == null)
             return;
         if (!toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListNY.getItems().add(topping);
@@ -119,7 +132,7 @@ public class NYPizzaController {
         Size size = Size.findSize(sizeOfPizza);
         newPizza.setSize(size);
         String pizzaType = ChoosePizzaNY.getValue();
-        if(pizzaType == null)
+        if (pizzaType == null)
             pizzaType = "Build Your Own Pizza";
         setPizzaPrice(pizzaType,((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
         newPizza.setPrice(price);
@@ -146,24 +159,24 @@ public class NYPizzaController {
      */
     private void setPizzaPrice(String pizzaType, String size) {
         if (pizzaType.equals("Build Your Own Pizza")) {
-            if (size.equals("Large")) price = 12.99;
-            else if (size.equals("Medium")) price = 10.99;
-            else price = 8.99;
-            if(toppings != null && toppings.size()>0){
-                price = price + toppings.size() * 1.59;
+            if (size.equals("Large")) price = PIZZA_TWELVE_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_TEN_PRICE;
+            else price = PIZZA_SMALL_PRICE;
+            if (toppings != null && toppings.size() > Empty) {
+                price = price + toppings.size() * PIZZA_TOPPING_PRICE;
             }
         } else if (pizzaType.equals("Deluxe")) {
-            if (size.equals("Large")) price = 18.99;
-            else if (size.equals("Medium")) price = 16.99;
-            else price = 14.99;
+            if (size.equals("Large")) price = PIZZA_EIGHTEEN_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_SIXTEEN_PRICE;
+            else price = PIZZA_FOURTEEN_PRICE;
         } else if (pizzaType.equals("BBQ Chicken")) {
-            if (size.equals("Large")) price = 17.99;
-            else if (size.equals("Medium")) price = 15.99;
-            else price = 13.99;
+            if (size.equals("Large")) price = PIZZA_LARGE_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_MEDIUM_PRICE;
+            else price = PIZZA_THIRTEEN_PRICE;
         } else if (pizzaType.equals("Meatzza")) {
-            if (size.equals("Large")) price = 19.99;
-            else if (size.equals("Medium")) price = 17.99;
-            else price = 15.99;
+            if (size.equals("Large")) price = PIZZA_SUPER_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_LARGE_PRICE;
+            else price = PIZZA_MEDIUM_PRICE;
         }
         PriceOfPizzaNY.setText(String.format("%.2f", price));
 
