@@ -49,7 +49,7 @@
                         <RadioButton layoutX="100.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing" text="Medium" toggleGroup="$ChicagoPizzaSize" />
                         <RadioButton layoutX="180.0" layoutY="49.0" mnemonicParsing="false" onAction="#updatePricing" text="Large" toggleGroup="$ChicagoPizzaSize" />
                         <Text layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crust Type:" />
-                        <Text fx:id="TypeOfCrustChicago" layoutX="138.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="30.13671875" />
+                        <Text fx:id="TypeOfCrustChicago" layoutX="138.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pan" wrappingWidth="30.13671875" />
                         <Text layoutX="33.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Toppings" textAlignment="CENTER" wrappingWidth="153.15746307373047" />
                     </children>
                 </Pane>
