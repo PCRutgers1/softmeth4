@@ -19,10 +19,10 @@ import java.util.ArrayList;
  */
 public class CurrentOrderController {
     @FXML
-    ListView<String> ListOfAllCurrentOrders;
+    private ListView<String> ListOfAllCurrentOrders;
 
     @FXML
-    Text subtotal, salesTax, orderTotal, OrderOutput;
+    private Text subtotal, salesTax, orderTotal, OrderOutput;
     private final static double TAX_RATE = 0.06625;
     private static int Empty = 0;
 

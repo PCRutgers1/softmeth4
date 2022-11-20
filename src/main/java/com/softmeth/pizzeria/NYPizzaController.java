@@ -4,6 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -22,6 +24,9 @@ public class NYPizzaController {
     private ToggleGroup NYPizzaSize;
 
     @FXML
+    private ImageView NYPizzaImage;
+
+    @FXML
     private ListView<String> ToppingsListNY, MyToppingsListNY;
     @FXML
     private ComboBox<String> ChoosePizzaNY;
@@ -35,12 +40,12 @@ public class NYPizzaController {
     @FXML
     private TextArea NYOutput;
 
-    RadioButton pizzaSize;
+    private RadioButton pizzaSize;
 
     private double price;
-    Set<Topping> toppings = new HashSet<Topping>();
+    private Set<Topping> toppings = new HashSet<Topping>();
     private static int Empty = 0;
-    private static int Invalid_Topping_Size = 6;
+    private static int Invalid_Topping_Size = 7;
     public static final double PIZZA_TOPPING_PRICE = 1.59;
     public static final double PIZZA_LARGE_PRICE = 17.99;
     public static final double PIZZA_SMALL_PRICE = 8.99;
@@ -72,11 +77,6 @@ public class NYPizzaController {
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
-        if (MyToppingsListNY.getItems().size() == Invalid_Topping_Size) {
-            NYAddButton.setDisable(true);
-        } else {
-            NYAddButton.setDisable(false);
-        }
         String topping =
                 ToppingsListNY.getSelectionModel().getSelectedItem();
         if (topping == null)
@@ -85,8 +85,12 @@ public class NYPizzaController {
             MyToppingsListNY.getItems().add(topping);
         }
 
-
         toppings.add(Topping.findTopping(topping));
+        if (MyToppingsListNY.getItems().size() == Invalid_Topping_Size) {
+            NYAddButton.setDisable(true);
+        } else {
+            NYAddButton.setDisable(false);
+        }
         setPizzaPrice("Build Your Own Pizza", ((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
     }
 
@@ -97,9 +101,11 @@ public class NYPizzaController {
      */
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e) {
-        NYAddButton.setDisable(false);
         String topping =
                 MyToppingsListNY.getSelectionModel().getSelectedItem();
+        if (topping == null)
+            return;
+        NYAddButton.setDisable(false);
         if (toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListNY.getItems().remove(topping);
         }
@@ -224,21 +230,25 @@ public class NYPizzaController {
             TypeOfCrustNY.setText("Hand Tossed");
             setPizzaPrice(pizzaType,
                     ((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
+            NYPizzaImage.setImage(new Image(getClass().getResource("newyork.jpg").toString(), true));
         } else if (pizzaType.equals("Deluxe")) {
             setButtons(true);
             TypeOfCrustNY.setText("Brooklyn");
             setPizzaPrice(pizzaType,
                     ((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
+            NYPizzaImage.setImage(new Image(getClass().getResource("deluxeny.jpeg").toString(), true));
         } else if (pizzaType.equals("BBQ Chicken")) {
             setButtons(true);
             TypeOfCrustNY.setText("Thin");
             setPizzaPrice(pizzaType,
                     ((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
+            NYPizzaImage.setImage(new Image(getClass().getResource("bbqny.jpg").toString(), true));
         } else if (pizzaType.equals("Meatzza")) {
             setButtons(true);
             TypeOfCrustNY.setText("Hand Tossed");
             setPizzaPrice(pizzaType,
                     ((RadioButton) NYPizzaSize.getSelectedToggle()).getText());
+            NYPizzaImage.setImage(new Image(getClass().getResource("meatzzany.jpg").toString(), true));
         }
     }
 }

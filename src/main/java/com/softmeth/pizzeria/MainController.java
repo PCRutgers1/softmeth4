@@ -14,7 +14,6 @@ import javafx.stage.Stage;
  * @author Peter Chen, Jonathon Lopez
  */
 public class MainController {
-    String[] orderOptions = {"Build Your Own Pizza", "Deluxe", "BBQ Chicken", "Meatzza"};
 
     /**
      * Event Handler to open Chicago Order Screen

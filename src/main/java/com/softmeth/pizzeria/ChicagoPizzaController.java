@@ -4,6 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 import java.lang.reflect.Array;
@@ -38,12 +40,15 @@ public class ChicagoPizzaController {
     @FXML
     private TextArea ChicagoOutput;
 
-    RadioButton pizzaSize;
+    @FXML
+    private ImageView ChicagoPizzaImage;
+
+    private RadioButton pizzaSize;
 
     private double price;
-    Set<Topping> toppings = new HashSet<Topping>();
+    private Set<Topping> toppings = new HashSet<Topping>();
     private static int Empty = 0;
-    private static int Invalid_Topping_Size = 6;
+    private static int Invalid_Topping_Size = 7;
     public static final double PIZZA_TOPPING_PRICE = 1.59;
     public static final double PIZZA_LARGE_PRICE = 17.99;
     public static final double PIZZA_SMALL_PRICE = 8.99;
@@ -77,11 +82,6 @@ public class ChicagoPizzaController {
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
-        if (MyToppingsListChicago.getItems().size() == Invalid_Topping_Size) {
-            ChicagoAddButton.setDisable(true);
-        } else {
-            ChicagoAddButton.setDisable(false);
-        }
         String topping =
                 ToppingsListChicago.getSelectionModel().getSelectedItem();
         if (topping == null)
@@ -90,8 +90,12 @@ public class ChicagoPizzaController {
             MyToppingsListChicago.getItems().add(topping);
         }
 
-
         toppings.add(Topping.findTopping(topping));
+        if (MyToppingsListChicago.getItems().size() >= Invalid_Topping_Size) {
+            ChicagoAddButton.setDisable(true);
+        } else {
+            ChicagoAddButton.setDisable(false);
+        }
         setPizzaPrice("Build Your Own Pizza", ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
 
@@ -102,9 +106,12 @@ public class ChicagoPizzaController {
      */
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e) {
-        ChicagoAddButton.setDisable(false);
         String topping =
                 MyToppingsListChicago.getSelectionModel().getSelectedItem();
+        if (topping == null)
+            return;
+        ChicagoAddButton.setDisable(false);
+
         if (toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListChicago.getItems().remove(topping);
         }
@@ -228,21 +235,25 @@ public class ChicagoPizzaController {
             TypeOfCrustChicago.setText("Pan");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            ChicagoPizzaImage.setImage(new Image(getClass().getResource("chicago2.jpg").toString(), true));
         } else if (pizzaType.equals("Deluxe")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Deep Dish");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            ChicagoPizzaImage.setImage(new Image(getClass().getResource("deluxe.jpg").toString(), true));
         } else if (pizzaType.equals("BBQ Chicken")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Pan");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            ChicagoPizzaImage.setImage(new Image(getClass().getResource("bbq.jpg").toString(), true));
         } else if (pizzaType.equals("Meatzza")) {
             setButtons(true);
             TypeOfCrustChicago.setText("Stuffed");
             setPizzaPrice(pizzaType,
                     ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+            ChicagoPizzaImage.setImage(new Image(getClass().getResource("meatzza.jpeg").toString(), true));
         }
     }
 }

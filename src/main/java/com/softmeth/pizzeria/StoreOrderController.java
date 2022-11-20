@@ -24,12 +24,12 @@ import java.util.ArrayList;
  */
 public class StoreOrderController {
     @FXML
-    ComboBox<Integer> OrderNumber;
+    private ComboBox<Integer> OrderNumber;
     @FXML
-    ListView<String> StoreOrderList;
+    private ListView<String> StoreOrderList;
 
     @FXML
-    Text OrderTotalStore, outputStoreOrders;
+    private Text OrderTotalStore, outputStoreOrders;
     private Order selectedOrder;
 
     /**
@@ -56,6 +56,7 @@ public class StoreOrderController {
     /**
      * The method that gets called to update the interface when a new
      * order is gets selected
+     *
      * @param e
      */
     @FXML
@@ -66,6 +67,7 @@ public class StoreOrderController {
 
     /**
      * updates the list view in the GUI with the new items for the current ID
+     *
      * @param orderValue the order ID value that is selected
      */
     private void updateListView(int orderValue) {
@@ -87,6 +89,7 @@ public class StoreOrderController {
 
     /**
      * The method that handles when an order gets cnaceled and takes it out of the database
+     *
      * @param e the action event that triggered the method
      */
     @FXML

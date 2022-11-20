@@ -1,7 +1,5 @@
 package com.softmeth.pizzeria;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -56,7 +54,6 @@ public class BuildYourOwn extends Pizza {
             this.getToppings().add((Topping) obj);
             return true;
         } catch (Exception e) {
-            System.out.println(e);
             return false;
         }
     }

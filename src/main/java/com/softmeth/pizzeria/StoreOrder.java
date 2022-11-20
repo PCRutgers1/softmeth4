@@ -21,16 +21,24 @@ public class StoreOrder implements Customizable {
      */
     @Override
     public boolean add(Object obj) {
-        return false;
+        try{
+            allOrders.add((Order) obj);
+            return true;
+        }catch (Exception e){
+        return false;}
     }
 
     /**
-     * This method adds an object obj to the store order
-     * @param obj the Object being added
+     * This method removes an object obj to the store order
+     * @param obj the Object being removed
      * @return true if the object is removed, otherwise false
      */
     @Override
     public boolean remove(Object obj) {
-        return false;
+        try{
+            allOrders.remove((Order) obj);
+            return true;
+        }catch (Exception e){
+            return false;}
     }
 }
