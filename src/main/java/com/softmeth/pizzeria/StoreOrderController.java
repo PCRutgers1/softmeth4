@@ -32,10 +32,17 @@ public class StoreOrderController {
     Text OrderTotalStore, outputStoreOrders;
     private Order selectedOrder;
 
+    /**
+     * the method that gets called on initialization of the GUI interface
+     */
     public void initialize() {
         setComboboxValues();
     }
 
+
+    /**
+     * sets the values for the combo box dropdown list with IDs
+     */
     private void setComboboxValues() {
         ArrayList<Integer> AllOrderNums = new ArrayList<>();
 
@@ -46,12 +53,21 @@ public class StoreOrderController {
         OrderNumber.setItems(FXCollections.observableList(AllOrderNums));
     }
 
+    /**
+     * The method that gets called to update the interface when a new
+     * order is gets selected
+     * @param e
+     */
     @FXML
     public void OrderNumChange(ActionEvent e) {
         if (OrderNumber.getValue() != null)
             updateListView(OrderNumber.getValue());
     }
 
+    /**
+     * updates the list view in the GUI with the new items for the current ID
+     * @param orderValue the order ID value that is selected
+     */
     private void updateListView(int orderValue) {
         ArrayList<String> newOrderList = new ArrayList<>();
         for (Order o : StoreOrder.allOrders) {
@@ -69,6 +85,10 @@ public class StoreOrderController {
         OrderTotalStore.setText(String.format("%.2f", selectedOrder.getOrderTotal()));
     }
 
+    /**
+     * The method that handles when an order gets cnaceled and takes it out of the database
+     * @param e the action event that triggered the method
+     */
     @FXML
     private void cancelOrder(ActionEvent e) {
         if (OrderNumber.getValue() == null)
@@ -88,6 +108,10 @@ public class StoreOrderController {
 
     }
 
+    /**
+     * This method exports all of the orders with their IDs and pizzas to the text file
+     * named storeorders.txt in the root directory
+     */
     @FXML
     private void exportList() {
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(

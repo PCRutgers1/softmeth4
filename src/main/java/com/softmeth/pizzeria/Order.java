@@ -15,7 +15,7 @@ public class Order implements Customizable {
 
     /**
      * Creates a new Current Order and gives it an ID
-     *
+     * @param orderTotal the total amount for the order
      */
     public Order(double orderTotal){
         this.orderTotal = orderTotal;

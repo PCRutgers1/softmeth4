@@ -69,7 +69,14 @@ public abstract class Pizza implements Customizable {
         return top;
 
     }
-
+    /**
+     * getter method for toppings
+     *
+     * @return toppings the Toppings of a Pizza
+     */
+    public ArrayList<Topping> getToppings() {
+        return this.toppings;
+    }
     /**
      * Set all the Attributes of a Pizza
      *

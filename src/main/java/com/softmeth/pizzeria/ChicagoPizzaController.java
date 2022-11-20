@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
 /**
  * The Controller class part of the MVC design pattern. This will
  * handle all the button on click events and will perform the necessary
@@ -45,18 +46,22 @@ public class ChicagoPizzaController {
 
     /**
      * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
+     *
+     * @param e the action event that triggered the method
      */
     @FXML
-    private void updatePricing(ActionEvent e){
+    private void updatePricing(ActionEvent e) {
         String pizzaType = ChoosePizzaChicago.getValue();
         if(pizzaType == null)
             pizzaType = "Build Your Own Pizza";
-        setPizzaPrice(pizzaType,((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+        setPizzaPrice(pizzaType, ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
 
 
     /**
-     *  Event Handler for the Adding Toppings to a Build Your Own Pizza
+     * Event Handler for the Adding Toppings to a Build Your Own Pizza
+     *
+     * @param e the action event that triggered the method
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
@@ -79,7 +84,9 @@ public class ChicagoPizzaController {
     }
 
     /**
-     *  Event Handler for the Removing Toppings from a Build Your Own Pizza
+     * Event Handler for the Removing Toppings from a Build Your Own Pizza
+     *
+     * @param e the action event that triggered the method
      */
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e) {
@@ -92,7 +99,6 @@ public class ChicagoPizzaController {
         toppings.remove(Topping.findTopping(topping));
         setPizzaPrice("Build Your Own Pizza", ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
     }
-
 
 
     /**
@@ -120,7 +126,7 @@ public class ChicagoPizzaController {
         String pizzaType = ChoosePizzaChicago.getValue();
         if(pizzaType == null)
             pizzaType = "Build Your Own Pizza";
-        setPizzaPrice(pizzaType,((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
+        setPizzaPrice(pizzaType, ((RadioButton) ChicagoPizzaSize.getSelectedToggle()).getText());
         newPizza.setPrice(price);
 
         ChicagoOutput.setText(ChicagoOutput.getText() + "Successfully added Pizza To Order \n");
@@ -128,7 +134,9 @@ public class ChicagoPizzaController {
     }
 
     /**
-     *  Sets enables or disables the add and remove toppings button
+     * Sets enables or disables the add and remove toppings button
+     *
+     * @param state the state to set the buttons to
      */
     private void setButtons(Boolean state) {
         ChicagoAddButton.setDisable(state);
@@ -136,35 +144,40 @@ public class ChicagoPizzaController {
     }
 
     /**
-     *  Sets the price depending on toppings and pizza chosen
+     * Sets the price depending on toppings and pizza chosen
+     *
+     * @param pizzaType the pizzatype for the pizza
+     * @param size      the size of the pizza
      */
     private void setPizzaPrice(String pizzaType, String size) {
         if (pizzaType.equals("Build Your Own Pizza")) {
-            if (size.equals("Large")) price = 12.99;
-            else if (size.equals("Medium")) price = 10.99;
-            else price = 8.99;
-            if(toppings != null && toppings.size()>0){
-                price = price + toppings.size() * 1.59;
+            if (size.equals("Large")) price = PIZZA_TWELVE_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_TEN_PRICE;
+            else price = PIZZA_SMALL_PRICE;
+            if (toppings != null && toppings.size() > Empty) {
+                price = price + toppings.size() * PIZZA_TOPPING_PRICE;
             }
         } else if (pizzaType.equals("Deluxe")) {
-            if (size.equals("Large")) price = 18.99;
-            else if (size.equals("Medium")) price = 16.99;
-            else price = 14.99;
+            if (size.equals("Large")) price = PIZZA_EIGHTEEN_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_SIXTEEN_PRICE;
+            else price = PIZZA_FOURTEEN_PRICE;
         } else if (pizzaType.equals("BBQ Chicken")) {
-            if (size.equals("Large")) price = 17.99;
-            else if (size.equals("Medium")) price = 15.99;
-            else price = 13.99;
+            if (size.equals("Large")) price = PIZZA_LARGE_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_MEDIUM_PRICE;
+            else price = PIZZA_THIRTEEN_PRICE;
         } else if (pizzaType.equals("Meatzza")) {
-            if (size.equals("Large")) price = 19.99;
-            else if (size.equals("Medium")) price = 17.99;
-            else price = 15.99;
+            if (size.equals("Large")) price = PIZZA_SUPER_PRICE;
+            else if (size.equals("Medium")) price = PIZZA_LARGE_PRICE;
+            else price = PIZZA_MEDIUM_PRICE;
         }
         PriceOfPizzaChicago.setText(String.format("%.2f", price));
 
     }
 
     /**
-     *  Sets the toppings depending on what pizza is chosen
+     * Sets the toppings depending on what pizza is chosen
+     *
+     * @param pizzaType the type of pizza to go along with toppings
      */
     private void setToppings(String pizzaType) {
         toppings = new HashSet<>();
@@ -191,6 +204,8 @@ public class ChicagoPizzaController {
 
     /**
      * Event Handler It updates all output shown and whether a user hs the ability to chose toppings
+     *
+     * @param e the action event that triggered the method
      */
     @FXML
     void ChangePizzaSelection(ActionEvent e) {

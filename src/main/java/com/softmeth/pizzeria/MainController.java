@@ -18,6 +18,7 @@ public class MainController {
 
     /**
      * Event Handler to open Chicago Order Screen
+     * @param e the action event that triggered the method
      */
     @FXML
     void orderChicagoPizza(ActionEvent e){
@@ -35,6 +36,7 @@ public class MainController {
 
     /**
      * Event Handler to open New York Order Screen
+     * @param e the action event that triggered the method
      */
     @FXML
     void orderNYPizza(ActionEvent e){
@@ -52,6 +54,7 @@ public class MainController {
 
     /**
      * Event Handler to open Current Order Screen
+     * @param e the action event that triggered the method
      */
     @FXML
     void viewCurrentOrder(ActionEvent e){
@@ -70,6 +73,7 @@ public class MainController {
 
     /**
      * Event Handler to open All Store Order Screen
+     * @param e the action event that triggered the method
      */
     @FXML
     void viewStoreOrders(ActionEvent e){

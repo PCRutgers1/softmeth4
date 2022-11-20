@@ -12,6 +12,7 @@ public class Meatzza extends Pizza{
      *
      * @param toppings the list of all the Toppings of a pizza
      * @param crust the Crust of the pizza
+     * @param  pizzaType the type of pizza which is either NY or chicago
      */
     public Meatzza(String[] toppings, Crust crust, String pizzaType) {
         super(toppings, crust);

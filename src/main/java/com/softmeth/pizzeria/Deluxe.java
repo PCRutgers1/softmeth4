@@ -8,6 +8,7 @@ public class Deluxe extends Pizza{
 
     private double price;
     private String pizzaType;
+
     /**
      * Set all the Attributes of a Deluxe Pizza
      *

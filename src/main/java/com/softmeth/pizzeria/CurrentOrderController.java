@@ -26,6 +26,7 @@ public class CurrentOrderController {
 
     /**
      * Event Handler for Placing the entire order
+     * @param e the action event that triggered the method
      */
     @FXML
     private void placeOrder(ActionEvent e) {
@@ -47,6 +48,9 @@ public class CurrentOrderController {
         showAllCurrentOrders();
     }
 
+    /**
+     * this shows all the current orders in the GUI interface
+     */
     private void showAllCurrentOrders() {
         ArrayList<String> myCurrentOrder = new ArrayList<>();
         double totalPrice = 0;
@@ -54,7 +58,7 @@ public class CurrentOrderController {
             myCurrentOrder.add(p.toString());
             totalPrice += p.price();
         }
-        double tax = totalPrice * 0.06625;
+        double tax = totalPrice * TAX_RATE;
         subtotal.setText(String.format("%.2f", totalPrice));
         salesTax.setText(String.format("%.2f", tax));
         orderTotal.setText(String.format("%.2f", totalPrice + tax));
@@ -64,6 +68,7 @@ public class CurrentOrderController {
 
     /**
      * Event Handler for Clears all items in current order
+     * @param e the action event that triggered the method
      */
     @FXML
     private void clearOrder(ActionEvent e) {
@@ -75,6 +80,10 @@ public class CurrentOrderController {
         orderTotal.setText("0");
     }
 
+    /**
+     * removes the pizza from the current order
+     * @param e the action event that triggered the method
+     */
     @FXML
     private void removePizza(ActionEvent e) {
         String pizzaToDelete = ListOfAllCurrentOrders.getSelectionModel().getSelectedItem();
