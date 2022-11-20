@@ -37,6 +37,7 @@
          <children>
             <Button layoutX="116.0" layoutY="34.0" mnemonicParsing="false" onAction="#cancelOrder" text="Cancel Order" />
             <Button layoutX="360.0" layoutY="34.0" mnemonicParsing="false" onAction="#exportList" text="Export Store Orders" />
+            <Text fx:id="outputStoreOrders" layoutX="277.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
       </Pane>
    </children>

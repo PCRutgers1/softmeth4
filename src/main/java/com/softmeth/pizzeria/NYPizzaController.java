@@ -42,6 +42,7 @@ public class NYPizzaController {
 
     /**
      * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
+     * @param e the action that triggered the event
      */
     @FXML
     private void updatePricing(ActionEvent e){
@@ -54,6 +55,7 @@ public class NYPizzaController {
 
     /**
      *  Event Handler for the Adding Toppings to a Build Your Own Pizza
+     * @param e the action that triggered the event
      */
     @FXML
     private void AddToppingToPizza(ActionEvent e) {
@@ -64,6 +66,8 @@ public class NYPizzaController {
         }
         String topping =
                 ToppingsListNY.getSelectionModel().getSelectedItem();
+        if(topping == null)
+            return;
         if (!toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListNY.getItems().add(topping);
         }
@@ -75,6 +79,8 @@ public class NYPizzaController {
 
     /**
      *  Event Handler for the Removing Toppings from a Build Your Own Pizza
+     *  @param e the action that triggered
+     *  the event
      */
     @FXML
     private void RemoveToppingFromPizza(ActionEvent e) {
@@ -124,6 +130,8 @@ public class NYPizzaController {
 
     /**
      *  Sets enables or disables the add and remove toppings button
+     *
+     * @param state the state of the add and remove buttons to set
      */
     private void setButtons(Boolean state) {
         NYAddButton.setDisable(state);
@@ -132,6 +140,9 @@ public class NYPizzaController {
 
     /**
      *  Sets the price depending on toppings and pizza chosen
+     *
+     * @param  pizzaType The type of pizza to set the price of
+     * @param  size the size of the pizza to determine its price
      */
     private void setPizzaPrice(String pizzaType, String size) {
         if (pizzaType.equals("Build Your Own Pizza")) {
@@ -160,6 +171,8 @@ public class NYPizzaController {
 
     /**
      *  Sets the toppings depending on what pizza is chosen
+     *
+     * @param pizzaType the type of pizza to set the toppings for
      */
     private void setToppings(String pizzaType) {
         toppings = new HashSet<>();
@@ -186,6 +199,8 @@ public class NYPizzaController {
 
     /**
      * Event Handler It updates all output shown and whether a user hs the ability to chose toppings
+     *
+     * @param e the action that triggered the event
      */
     @FXML
     void ChangePizzaSelection(ActionEvent e) {

@@ -29,13 +29,14 @@ public class StoreOrderController {
     ListView<String> StoreOrderList;
 
     @FXML
-    Text OrderTotalStore;
+    Text OrderTotalStore, outputStoreOrders;
     private Order selectedOrder;
+
     public void initialize() {
         setComboboxValues();
     }
 
-    private void setComboboxValues(){
+    private void setComboboxValues() {
         ArrayList<Integer> AllOrderNums = new ArrayList<>();
 
         for (Order o : StoreOrder.allOrders) {
@@ -44,22 +45,23 @@ public class StoreOrderController {
 
         OrderNumber.setItems(FXCollections.observableList(AllOrderNums));
     }
+
     @FXML
-    public void OrderNumChange(ActionEvent e){
+    public void OrderNumChange(ActionEvent e) {
         if (OrderNumber.getValue() != null)
             updateListView(OrderNumber.getValue());
     }
 
-    private void updateListView(int orderValue){
+    private void updateListView(int orderValue) {
         ArrayList<String> newOrderList = new ArrayList<>();
-        for(Order o: StoreOrder.allOrders){
-            if (o.getOrderId() == orderValue){
+        for (Order o : StoreOrder.allOrders) {
+            if (o.getOrderId() == orderValue) {
                 selectedOrder = o;
                 break;
             }
         }
 
-        for(Pizza p: selectedOrder.getCurrentOrderPizzas()){
+        for (Pizza p : selectedOrder.getCurrentOrderPizzas()) {
             newOrderList.add(p.toString());
         }
 
@@ -68,12 +70,12 @@ public class StoreOrderController {
     }
 
     @FXML
-    private void cancelOrder(ActionEvent e){
+    private void cancelOrder(ActionEvent e) {
         if (OrderNumber.getValue() == null)
-                return;
+            return;
         int orderToDelete = OrderNumber.getValue();
-        for(Order n :StoreOrder.allOrders){
-            if (n.getOrderId() == orderToDelete){
+        for (Order n : StoreOrder.allOrders) {
+            if (n.getOrderId() == orderToDelete) {
                 StoreOrder.allOrders.remove(n);
                 break;
             }
@@ -82,20 +84,23 @@ public class StoreOrderController {
         setComboboxValues();
         StoreOrderList.setItems(FXCollections.observableList(new ArrayList<>()));
         OrderTotalStore.setText("0.00");
+        outputStoreOrders.setText("Successfully Canceled Order");
+
     }
 
     @FXML
-    private void exportList(){
-        try(Writer writer = new BufferedWriter(new OutputStreamWriter(
-                new FileOutputStream("StoreOrders.txt"), StandardCharsets.UTF_8))){
-            for(Order ord: StoreOrder.allOrders){
+    private void exportList() {
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream("StoreOrders.txt"), StandardCharsets.UTF_8))) {
+            for (Order ord : StoreOrder.allOrders) {
                 writer.write("Order ID of " + ord.getOrderId() + "\n");
-                for(Pizza p: ord.getCurrentOrderPizzas()){
+                for (Pizza p : ord.getCurrentOrderPizzas()) {
                     writer.write(p.toString() + "\n");
                 }
-                writer.write("Order Total With Tax: "+ord.getOrderTotal()+"\n");
+                writer.write("Order Total With Tax: $" + ord.getOrderTotal() + "\n");
+                outputStoreOrders.setText("Successfully Exported List");
             }
-        }catch(Exception e){
+        } catch (Exception e) {
 
         }
     }

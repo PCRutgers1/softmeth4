@@ -42,6 +42,7 @@ public class ChicagoPizzaController {
     private double price;
     Set<Topping> toppings = new HashSet<Topping>();
 
+
     /**
      * Event Handler for Updating the price of a Build Your Own Pizza as toppings are being added
      */
@@ -66,6 +67,8 @@ public class ChicagoPizzaController {
         }
         String topping =
                 ToppingsListChicago.getSelectionModel().getSelectedItem();
+        if(topping == null)
+            return;
         if (!toppings.contains(Topping.findTopping(topping))) {
             MyToppingsListChicago.getItems().add(topping);
         }

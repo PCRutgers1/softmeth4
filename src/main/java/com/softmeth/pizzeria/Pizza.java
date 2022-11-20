@@ -54,7 +54,7 @@ public abstract class Pizza implements Customizable {
         else
             pizzaType = "Build Your Own Pizza";
         return pizzaType + "(" + this.getPizzaType() + " Style - " + this.crust.getCrust() +
-                ",)" + this.toppingsToString() + this.size + ", $" + String.format("%.2f", this.price());
+                ")" + this.toppingsToString() + this.size + ", $" + String.format("%.2f", this.price());
     }
 
     /**
