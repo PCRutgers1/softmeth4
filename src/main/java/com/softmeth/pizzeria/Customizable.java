@@ -8,10 +8,14 @@ package com.softmeth.pizzeria;
 public interface Customizable<E> {
     /**
      * Template other classes must implement
+     * @param obj the object to add
+     * @return true if successfully added object, false otherwise
      */
     boolean add(Object obj);
     /**
      * Template other classes must implement
+     * @param obj the object to add
+     * @return true if successfully added object, false otherwise
      */
     boolean remove(Object obj);
 }

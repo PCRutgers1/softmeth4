@@ -8,18 +8,22 @@ package com.softmeth.pizzeria;
 public interface PizzaFactory {
     /**
      * Template other classes must implement
+     * @return retuns the new pizza created
      */
     Pizza createDeluxe();
     /**
      * Template other classes must implement
+     * @return retuns the new pizza created
      */
     Pizza createMeatzza();
     /**
      * Template other classes must implement
+     * @return retuns the new pizza created
      */
     Pizza createBBQChicken();
     /**
      * Template other classes must implement
+     * @return retuns the new pizza created
      */
     Pizza createBuildYourOwn();
 }

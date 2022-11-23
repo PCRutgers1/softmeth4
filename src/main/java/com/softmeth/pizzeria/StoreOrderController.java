@@ -57,7 +57,7 @@ public class StoreOrderController {
      * The method that gets called to update the interface when a new
      * order is gets selected
      *
-     * @param e
+     * @param e action event that triggered the method
      */
     @FXML
     public void OrderNumChange(ActionEvent e) {
